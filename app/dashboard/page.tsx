@@ -64,7 +64,7 @@ const DynamicH3 = dynamic(
     loading: () => (
       <>
         <div role="status" className="w-auto animate-pulse">
-          <div className="h-6 bg-gray-200 rounded-xl dark:bg-gray-700 w-48 "></div>
+          <div className="mt-12 h-6 bg-gray-200 rounded-xl dark:bg-gray-700 w-48 "></div>
         </div>
       </>
     ),
