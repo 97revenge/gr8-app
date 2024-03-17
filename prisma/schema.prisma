@@ -15,34 +15,36 @@ datasource db {
 
 model ORCAMENTOS {
   id           Int     @id @default(autoincrement())
-  numOrc       Int
-  dtEmissao    String
-  nomeCLI      String
-  valorTotal   Int
-  descSituacao String
-  dataEntrega  String?
-  vendNome     String
+  NumOrc       Int
+  DtEmissao    String
+  Nome_cli     String
+  ValorTotal   String
+  DescSituacao String
+  DataEntrega  String?
+  Vend_Nome    String
 
   @@map("orcamento")
 }
 
-model Cliente {
-  id       Int    @id @default(autoincrement())
-  codCLI   Int
-  nomeCLI  String
-  cnpjCLI  String
-  fone1CLI String
-  email    String
-  cidCLI   String
-  ufCLI    String
+model Clientes {
+  id           Int     @id @default(autoincrement())
+  CodCli       Int?
+  Nome_cli     String?
+  Cnpj_cpf_cli String?
+  Fone1_Cli    String
+  Texto271     String?
+  Cid_Cli      String?
+  Uf_Cli       String?
 
   @@map("clientes")
 }
 
 model Produtos {
   id            Int     @id @default(autoincrement())
-  codigo        String
-  description   String
-  codFornecedor Int
-  fabricante    String?
+  Codigo        String
+  Descricao   String
+  codFornecedor String?
+  Fabricante    String?
+
+  @@map("produtos")
 }

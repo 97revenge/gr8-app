@@ -39,9 +39,13 @@ export const GET = async () => {
   value?.forEach((valueRange, index) => {
     console.log(`Data for range ${index + 1}:`);
     const rows = valueRange.values;
+    const tag = Array.from([parameters.data.values])[0];
+
     if (rows) {
       rows.forEach((row) => {
-        console.log(row.join(", "));
+        // console.log(row.join(" , "));
+        // console.log(row);
+        console.log(tag);
       });
     } else {
       console.log("No data found in this range.");

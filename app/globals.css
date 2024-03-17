@@ -1,33 +1,106 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background: 314 45% 100%;
+    --foreground: 314 65% 4%;
+    --muted: 134 0% 100%;
+    --muted-foreground: 134 5% 36%;
+    --popover: 0 0% 99%;
+    --popover-foreground: 314 65% 3%;
+    --card: 0 0% 99%;
+    --card-foreground: 314 65% 3%;
+    --border: 314 10% 91%;
+    --input: 314 10% 91%;
+    --primary: 142.64 55.63% 35.09%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 134 62.86% 24.09%;
+    --secondary-foreground: 174.34 0% 98.46%;
+    --accent: 165.28 69.52% 35.85%;
+    --accent-foreground: 134 99% 11%;
+    --destructive: 7 75.38% 47.37%;
+    --destructive-foreground: 7 97% 95%;
+    --ring: 165.28 63.44% 42.36%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 314 33% 2%;
+    --foreground: 314 35% 97%;
+    --muted: 134 20% 15%;
+    --muted-foreground: 134 5% 64%;
+    --popover: 314 33% 3%;
+    --popover-foreground: 314 35% 98%;
+    --card: 314 33% 3%;
+    --card-foreground: 314 35% 98%;
+    --border: 314 10% 14%;
+    --input: 314 10% 14%;
+    --primary: 314 99% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 134 99% 51%;
+    --secondary-foreground: 134 99% 11%;
+    --accent: 134 99% 51%;
+    --accent-foreground: 134 99% 11%;
+    --destructive: 7 97% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --ring: 314 99% 51%;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.spinner {
+  position: relative;
+  width: 80px;
+  /* Adjust the width accordingly */
+  height: 16px;
+  /* Keep the height the same */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.spinner div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #004dff;
+  border-radius: 50%;
+  animation: spinner-4t3wzl 2s infinite linear;
+}
+
+.spinner div:nth-child(1) {
+  left: 0;
+  animation-delay: 0.15s;
+  background-color: rgb(60, 149, 94);
+}
+
+.spinner div:nth-child(2) {
+  left: 25%;
+  animation-delay: 0.3s;
+  background-color: rgba(0, 77, 255, 0.8);
+}
+
+.spinner div:nth-child(3) {
+  left: 50%;
+  animation-delay: 0.45s;
+  background-color: rgb(60, 149, 94);
+}
+
+.spinner div:nth-child(4) {
+  left: 75%;
+  animation-delay: 0.6s;
+  background-color: rgba(0, 77, 255, 0.6);
+}
+
+.spinner div:nth-child(5) {
+  left: 100%;
+  animation-delay: 0.75s;
+  background-color: rgb(60, 149, 94);
+}
+
+@keyframes spinner-4t3wzl {
+  0% {
+    transform: rotate(0deg) translateX(-100%);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(-100%);
   }
 }
