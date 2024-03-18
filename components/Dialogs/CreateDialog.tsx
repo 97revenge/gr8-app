@@ -9,6 +9,11 @@ import {
   DialogTrigger,
   DialogPortal,
 } from "../ui/dialog";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "../ui/hover-card";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
 import BudgetDialog from "./BudgetDialog";
@@ -168,7 +173,17 @@ export default function CreateDialog() {
                 d="M7.529 7.988a2.502 2.502 0 0 1 5 .191A2.441 2.441 0 0 1 10 10.582V12m-.01 3.008H10M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
               />
             </svg>
-            Porque eu preciso escolher minha planilha ?
+            <HoverCard>
+              <HoverCardTrigger>
+                Porque eu preciso escolher minha planilha ?
+              </HoverCardTrigger>
+              <HoverCardContent>
+                <span>
+                  Voçe precisa escolher sua planilha especifica para definir
+                  quais dados <u>criar, deletar , ou alterar. </u>
+                </span>
+              </HoverCardContent>
+            </HoverCard>
           </a>
         </div>
       </div>
