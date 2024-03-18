@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { BudgetsType, ProductsType } from "@/types";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
 
 import { useEffect, useState } from "react";
 
@@ -76,6 +77,8 @@ const DynamicH3 = dynamic(
 );
 
 export default function Page() {
+  const router = useRouter();
+
   const [budget, setBudget] = useState<BudgetsType>([]);
   const [products, setProducts] = useState<ProductsType>([]);
 
@@ -96,24 +99,6 @@ export default function Page() {
     }
     fetchData();
   }, []);
-
-  // const productResponse = await fetch(
-  //   `${process.env.URL_DOMAIN}/products` ||
-  //     "http://localhost:3000/api/products",
-  //   {
-  //     next: { revalidate: 3600 },
-  //   }
-  // );
-
-  // const budgetResponse = await fetch(
-  //   `${process.env.URL_DOMAIN}/budget` || "http://localhost:3000/api/budget",
-  //   {
-  //     next: { revalidate: 3600 },
-  //   }
-  // );
-
-  // const budget: BudgetsType = await budgetResponse.json();
-  // const products: ProductsType = await productResponse.json();
 
   return (
     <>
@@ -152,7 +137,12 @@ export default function Page() {
           <CardFooter className="border-t-2 border-success-600 px-6 py-3 bg-gray-100">
             <div className="w-full">
               <DynamicH4>
-                <Button className="w-full ">Acesso</Button>
+                <Button
+                  className="w-full "
+                  onClick={() => router.push("/dashboard/products")}
+                >
+                  Acesso
+                </Button>
               </DynamicH4>
             </div>
           </CardFooter>
@@ -206,7 +196,12 @@ export default function Page() {
           <CardFooter className="border-t-2 border-success-600 px-6 py-3 bg-gray-100">
             <div className="w-full">
               <DynamicH4>
-                <Button className="w-full ">Acesso</Button>
+                <Button
+                  className="w-full "
+                  onClick={() => router.push("/dashboard/budget")}
+                >
+                  Acesso
+                </Button>
               </DynamicH4>
             </div>
           </CardFooter>

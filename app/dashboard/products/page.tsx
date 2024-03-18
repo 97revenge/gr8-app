@@ -1,5 +1,5 @@
 "use client";
-// import TableDemo from "@/components/Tables/TableDemo";
+import TableDemo from "@/components/Tables/TableDemo";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
             <Button className="bg-blue-500">Editar </Button>
             <Button variant={"destructive"}>Excluir </Button>
           </div>
-          {/* <TableDemo /> */}
+          <TableDemo />
         </div>
       </div>
     </>
