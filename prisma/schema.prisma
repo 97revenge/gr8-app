@@ -41,7 +41,7 @@ model Clientes {
 
 model Produtos {
   id            Int     @id @default(autoincrement())
-  Codigo        String
+  Codigo        String 
   Descricao     String
   codFornecedor String?
   Fabricante    String?

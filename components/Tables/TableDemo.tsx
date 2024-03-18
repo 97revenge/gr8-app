@@ -31,10 +31,11 @@ export default function TableDemo() {
   return (
     <>
       <div className="">
-        <Table className="scroll-auto ">
+        <Table className="scroll-auto">
           <TableCaption>Lista de produtos </TableCaption>
           <TableHeader>
             <TableRow className="bg-gray-300 rounded-xl">
+              <TableHead>ID</TableHead>
               <TableHead>Codigo</TableHead>
               <TableHead className="text-center">Descrição</TableHead>
               <TableHead>Código do Fornecedor</TableHead>
@@ -43,7 +44,10 @@ export default function TableDemo() {
           </TableHeader>
           <TableBody className="scroll-auto max-h-md  overflow-y-auto">
             {products.map((item) => (
-              <TableRow key={item.id} className="scroll-auto">
+              <TableRow key={item.Codigo} className="scroll-auto">
+                <TableCell className="font-medium text-center text-white bg-gray-900  rounded-md">
+                  {item.id}
+                </TableCell>
                 <TableCell className="font-medium text-center bg-white">
                   {item.Codigo}
                 </TableCell>
