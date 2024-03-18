@@ -15,9 +15,13 @@ import {
 import dynamic from "next/dynamic";
 
 export default async function TableDemo() {
-  const response = await fetch("http://localhost:3000/api/products");
+  // const response = await fetch(
+  //   "http://localhost:3000/api/products" || "http://gr8-app/api/products"
+  // );
 
-  const data: ProductsType = await response.json();
+  // const data: ProductsType = await response.json();
+
+  const data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
 
   return (
     <Table className="scroll-auto">
@@ -31,7 +35,7 @@ export default async function TableDemo() {
         </TableRow>
       </TableHeader>
       <TableBody className="scroll-auto max-h-md overflow-y-auto">
-        {data.map((item) => (
+        {/* {data.map((item) => (
           <TableRow key={item.id} className="scroll-auto ">
             <TableCell className="font-medium text-center bg-white">
               {item.Codigo}
@@ -46,7 +50,7 @@ export default async function TableDemo() {
               {item.Fabricante}
             </TableCell>
           </TableRow>
-        ))}
+        ))} */}
       </TableBody>
       <TableFooter>
         <TableRow>

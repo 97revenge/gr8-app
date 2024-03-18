@@ -34,24 +34,23 @@ export const GET = async () => {
 
   const parametersValue = parameters.data.values;
 
-  const value = response.data.valueRanges;
+  // const value = response.data.valueRanges;
 
-  value?.forEach((valueRange, index) => {
-    console.log(`Data for range ${index + 1}:`);
-    const rows = valueRange.values;
-    const tag = Array.from([parameters.data.values])[0];
+  // value?.forEach((valueRange, index) => {
+  //   console.log(`Data for range ${index + 1}:`);
+  //   const rows = valueRange.values;
+  //   const tag = Array.from([parameters.data.values])[0];
 
-    if (rows) {
-      rows.forEach((row) => {
-        // console.log(row.join(" , "));
-        // console.log(row);
-      });
-    } else {
-    }
-  });
+  //   if (rows) {
+  //     rows.forEach((row) => {
+  //       // console.log(row.join(" , "));
+  //       // console.log(row);
+  //     });
+  //   } else {
+  //   }
+  // });
 
   return Response.json({
     parameters: parametersValue,
-    data: value,
   });
 };
