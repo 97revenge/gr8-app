@@ -16,18 +16,30 @@ import { Label } from "../ui/label";
 
 import { useForm } from "react-hook-form";
 
+import { ReactNode, useState } from "react";
+import { products } from "@/types/zod/products";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ReactNode } from "react";
 
 export default function ProductDialog() {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({});
+  } = useForm({ resolver: zodResolver(products) });
 
-  const handler = (data: any) => {
-    return alert(JSON.stringify(data));
+  const handler = async (data: any) => {
+    try {
+      const response = await fetch("/api/products", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      alert(response.status);
+    } catch (err) {
+      alert(err);
+    }
   };
 
   return (
@@ -42,14 +54,22 @@ export default function ProductDialog() {
         <form action="POST" onSubmit={handleSubmit(handler)}>
           <Label>Código</Label>
           <Input placeholder="insira" {...register("Codigo")}></Input>
-          {errors.Codigo?.message && (
-            <span>{errors.Codigo?.message as ReactNode}</span>
-          )}
+          <div>
+            {errors.Codigo?.message && (
+              <span className="text-red-500 font-bold">
+                {errors.Codigo?.message as ReactNode}
+              </span>
+            )}
+          </div>
           <Label>Descriçâo</Label>
           <Input placeholder="insira" {...register("Descricao")}></Input>
-          {errors.Descricao?.message && (
-            <span>{errors.Descricao?.message as ReactNode}</span>
-          )}
+          <div>
+            {errors.Descricao?.message && (
+              <span className="text-red-500 font-bold">
+                {errors.Descricao?.message as ReactNode}
+              </span>
+            )}
+          </div>
           <Label>Código do Fornecedor</Label>
           <Input
             type="text"
@@ -61,11 +81,13 @@ export default function ProductDialog() {
           )}
           <Label>Fabricante</Label>
           <Input placeholder="insira" type="text" {...register("Fabricante")} />
-          {errors.Fabricante?.message && (
-            <span>{errors.Fabricante?.message as ReactNode}</span>
-          )}
+
           <DialogFooter>
-            <Button type="submit">Confirmar</Button>
+            <div>
+              <Button type="submit" className="mt-2">
+                Confirmar
+              </Button>
+            </div>
           </DialogFooter>
         </form>
       </DialogContent>

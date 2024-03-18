@@ -31,6 +31,11 @@ export interface BudgetsType extends z.infer<typeof budgets> {}
 
 export interface ClientsType extends z.infer<typeof clients> {}
 
-export interface ProductsType extends z.infer<typeof products> {}
+export interface ProductsType extends z.infer<typeof products> {
+  Fabricante: any;
+  codFornecedor: any;
+  Descricao: any;
+  Codigo: any;
+}
 
 export { products };

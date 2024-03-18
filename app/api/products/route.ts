@@ -6,11 +6,24 @@ import { ProductsType } from "@/types";
 const prisma = new PrismaClient();
 
 export const POST = async (Request: NextRequest) => {
-  const body = await Request.json();
+  try {
+    const body: ProductsType = await Request.json();
 
-  const response = await JSON.parse(body);
+    const instance = await prisma.produtos.create({
+      data: {
+        Codigo: String(body.Codigo),
+        Descricao: String(body.Descricao),
+        codFornecedor: String(body.codFornecedor),
+        Fabricante: String(body.Fabricante),
+      },
+    });
 
-  console.log(response);
+    console.log(instance);
+
+    return Response.json({ message: "ok" }, { status: 200 });
+  } catch (err) {
+    console.log(err);
+  }
 };
 
 export const GET = async () => {

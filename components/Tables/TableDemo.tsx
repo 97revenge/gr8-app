@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/table";
 
 export default function TableDemo() {
-  const [products, setProducts] = useState<ProductsType>([]);
+  const [products, setProducts] = useState<ProductsType>([] as any);
 
   useEffect(() => {
     async function fetchData() {

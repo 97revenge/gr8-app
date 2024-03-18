@@ -80,7 +80,7 @@ export default function Page() {
   const router = useRouter();
 
   const [budget, setBudget] = useState<BudgetsType>([]);
-  const [products, setProducts] = useState<ProductsType>([]);
+  const [products, setProducts] = useState<ProductsType>([] as any);
 
   useEffect(() => {
     async function fetchData() {
