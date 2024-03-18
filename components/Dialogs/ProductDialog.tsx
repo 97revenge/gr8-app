@@ -1,4 +1,8 @@
+"use client";
+
 import { Button } from "../ui/button";
+
+import toast, { Toaster } from "react-hot-toast";
 import {
   DialogContent,
   Dialog,
@@ -19,13 +23,17 @@ import { useForm } from "react-hook-form";
 import { ReactNode, useState } from "react";
 import { products } from "@/types/zod/products";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
 
 export default function ProductDialog() {
+  const router = useRouter();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({ resolver: zodResolver(products) });
+
+  const [status, setStatus] = useState<number>();
 
   const handler = async (data: any) => {
     try {
@@ -36,7 +44,10 @@ export default function ProductDialog() {
           "Content-Type": "application/json",
         },
       });
-      alert(response.status);
+      setStatus(response.status);
+      if (status == 200) {
+        return router.push("dashboard/products");
+      }
     } catch (err) {
       alert(err);
     }

@@ -4,6 +4,17 @@ import TableDemo from "@/components/Tables/TableDemo";
 import { Button } from "@/components/ui/button";
 
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import dynamic from "next/dynamic";
+import PageLoader from "@/components/Loaders/PageLoader";
+
+const DynamicTable = dynamic(() => import("@/components/Tables/TableDemo"), {
+  loading: () => (
+    <>
+      <PageLoader />
+    </>
+  ),
+  ssr: false,
+});
 
 export default function Home() {
   return (
@@ -20,7 +31,7 @@ export default function Home() {
             <Button className="bg-blue-500">Editar </Button>
             <Button variant={"destructive"}>Excluir </Button>
           </div>
-          <TableDemo />
+          <DynamicTable />
         </div>
       </div>
     </>
