@@ -76,13 +76,21 @@ const DynamicH3 = dynamic(
 export default async function Page() {
   const router = useRouter();
 
-  const productResponse = await fetch("http://localhost:3000/api/products", {
-    next: { revalidate: 3600 },
-  });
+  const productResponse = await fetch(
+    "http://localhost:3000/api/products" ||
+      "https://gr8-app.vercel.app/api/products",
+    {
+      next: { revalidate: 3600 },
+    }
+  );
 
-  const budgetResponse = await fetch("http://localhost:3000/api/budget", {
-    next: { revalidate: 3600 },
-  });
+  const budgetResponse = await fetch(
+    "http://localhost:3000/api/products" ||
+      "https://gr8-app.vercel.app/api/products",
+    {
+      next: { revalidate: 3600 },
+    }
+  );
 
   const budget: BudgetsType = await budgetResponse.json();
   const products: ProductsType = await productResponse.json();
