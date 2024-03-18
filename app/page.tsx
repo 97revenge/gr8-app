@@ -29,10 +29,13 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Button
-                onClick={() => router.push("/dashboard")}
+                onClick={() => {
+                  return router.push("/dashboard");
+                }}
                 className="block w-full rounded bg-green-600 px-12 py-3 items-center text-sm font-medium text-white shadow hover:bg-green-700 focus:outline-none focus:ring active:bg-green-500 sm:w-auto"
+                type="submit"
               >
-                Get Started
+                Iniciar
               </Button>
             </div>
           </div>

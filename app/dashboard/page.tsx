@@ -1,13 +1,15 @@
 "use client";
 
 import DashboardCards from "@/components/Cards/DashboardCards";
+
 import HelloHeader from "@/components/Headers/HelloHeader";
 import PageLoader from "@/components/Loaders/PageLoader";
 import { Button } from "@/components/ui/button";
 import { CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { BudgetsType, ProductsType } from "@/types";
 import dynamic from "next/dynamic";
-import { useRouter } from "next/navigation";
+
+import { useEffect, useState } from "react";
 
 const PageDynamic = dynamic(() => import("@/components/Layouts/MainLayout"), {
   loading: () => (
@@ -73,20 +75,38 @@ const DynamicH3 = dynamic(
   }
 );
 
-export default async function Page() {
-  const router = useRouter();
+export default function Page() {
+  const [budget, setBudget] = useState<BudgetsType>([]);
+  const [products, setProducts] = useState<ProductsType>([]);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const [productResponse, budgetResponse] = await Promise.all([
+          fetch("/api/products"),
+          fetch("/api/budget"),
+        ]);
+        const productsData = await productResponse.json();
+        const budgetData = await budgetResponse.json();
+        setProducts(productsData);
+        setBudget(budgetData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+    fetchData();
+  }, []);
 
   // const productResponse = await fetch(
-  //   "http://localhost:3000/api/products" ||
-  //     "https://gr8-app.vercel.app/api/products",
+  //   `${process.env.URL_DOMAIN}/products` ||
+  //     "http://localhost:3000/api/products",
   //   {
   //     next: { revalidate: 3600 },
   //   }
   // );
 
   // const budgetResponse = await fetch(
-  //   "http://localhost:3000/api/budget" ||
-  //     "https://gr8-app.vercel.app/api/products",
+  //   `${process.env.URL_DOMAIN}/budget` || "http://localhost:3000/api/budget",
   //   {
   //     next: { revalidate: 3600 },
   //   }
@@ -94,9 +114,6 @@ export default async function Page() {
 
   // const budget: BudgetsType = await budgetResponse.json();
   // const products: ProductsType = await productResponse.json();
-
-  const poducts = 212;
-  const budget = 524;
 
   return (
     <>
@@ -127,7 +144,7 @@ export default async function Page() {
             </DynamicH3>
           </CardHeader>
           <CardContent className=" transition-all p-6 bg-white back hover:m-2 hover:rounded-xl">
-            <DynamicH1>{poducts}</DynamicH1>
+            <DynamicH1>{products.length}</DynamicH1>
             <h5 className="mb-2 text-xl font-medium leading-tight text-success-600">
               Itens Cadastrados
             </h5>
@@ -135,12 +152,7 @@ export default async function Page() {
           <CardFooter className="border-t-2 border-success-600 px-6 py-3 bg-gray-100">
             <div className="w-full">
               <DynamicH4>
-                <Button
-                  className="w-full "
-                  onClick={() => router.push("/dashboard/products")}
-                >
-                  Acesso
-                </Button>
+                <Button className="w-full ">Acesso</Button>
               </DynamicH4>
             </div>
           </CardFooter>
@@ -186,7 +198,7 @@ export default async function Page() {
             </DynamicH3>
           </CardHeader>
           <CardContent className=" transition-all p-6 bg-white back hover:m-2 hover:rounded-xl">
-            <DynamicH1>{budget}</DynamicH1>
+            <DynamicH1>{budget.length}</DynamicH1>
             <h5 className="mb-2 text-xl font-medium leading-tight text-success-600">
               Itens Cadastrados
             </h5>
@@ -194,12 +206,7 @@ export default async function Page() {
           <CardFooter className="border-t-2 border-success-600 px-6 py-3 bg-gray-100">
             <div className="w-full">
               <DynamicH4>
-                <Button
-                  className="w-full "
-                  onClick={() => router.push("/dashboard/budget")}
-                >
-                  Acesso
-                </Button>
+                <Button className="w-full ">Acesso</Button>
               </DynamicH4>
             </div>
           </CardFooter>
