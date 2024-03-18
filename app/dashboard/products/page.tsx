@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import dynamic from "next/dynamic";
 import PageLoader from "@/components/Loaders/PageLoader";
+import DeleteProductDialog from "@/components/Dialogs/DeleteProductDialog";
+import EditProductDialog from "@/components/Dialogs/EditProductDialog";
 
 const DynamicTable = dynamic(() => import("@/components/Tables/TableDemo"), {
   loading: () => (
@@ -28,8 +30,18 @@ export default function Home() {
               </DialogTrigger>
               <ProductDialog />
             </Dialog>
-            <Button className="bg-blue-500">Editar </Button>
-            <Button variant={"destructive"}>Excluir </Button>
+            <Dialog>
+              <DialogTrigger>
+                <Button variant={"destructive"}>Excluir </Button>
+              </DialogTrigger>
+              <DeleteProductDialog />
+            </Dialog>
+            <Dialog>
+              <DialogTrigger>
+                <Button className="bg-blue-500">Editar </Button>
+              </DialogTrigger>
+              <EditProductDialog />
+            </Dialog>
           </div>
           <DynamicTable />
         </div>

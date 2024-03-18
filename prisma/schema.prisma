@@ -42,9 +42,14 @@ model Clientes {
 model Produtos {
   id            Int     @id @default(autoincrement())
   Codigo        String
-  Descricao   String
+  Descricao     String
   codFornecedor String?
   Fabricante    String?
 
   @@map("produtos")
+}
+
+model Pedidos {
+  id   Int    @id() @default(autoincrement())
+  nome String
 }
