@@ -1,12 +1,13 @@
+"use client";
+
 import DashboardCards from "@/components/Cards/DashboardCards";
 import HelloHeader from "@/components/Headers/HelloHeader";
-import MainLayout from "@/components/Layouts/MainLayout";
 import PageLoader from "@/components/Loaders/PageLoader";
-import TableDemo from "@/components/Tables/TableDemo";
 import { Button } from "@/components/ui/button";
 import { CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { BudgetsType, ProductsType } from "@/types";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
 
 const PageDynamic = dynamic(() => import("@/components/Layouts/MainLayout"), {
   loading: () => (
@@ -73,6 +74,8 @@ const DynamicH3 = dynamic(
 );
 
 export default async function Page() {
+  const router = useRouter();
+
   const productResponse = await fetch("http://localhost:3000/api/products", {
     next: { revalidate: 3600 },
   });
@@ -123,7 +126,12 @@ export default async function Page() {
               <DynamicH4>
                 {productResponse.status == 200 && (
                   <>
-                    <Button className="w-full ">Acesso</Button>
+                    <Button
+                      className="w-full "
+                      onClick={() => router.push("/dashboard/products")}
+                    >
+                      Acesso
+                    </Button>
                   </>
                 )}
               </DynamicH4>
@@ -181,7 +189,12 @@ export default async function Page() {
               <DynamicH4>
                 {productResponse.status == 200 && (
                   <>
-                    <Button className="w-full ">Acesso</Button>
+                    <Button
+                      className="w-full "
+                      onClick={() => router.push("/dashboard/budget")}
+                    >
+                      Acesso
+                    </Button>
                   </>
                 )}
               </DynamicH4>
