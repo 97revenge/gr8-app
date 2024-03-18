@@ -8,27 +8,27 @@ export default function Home() {
 
   return (
     <>
-      <section className="bg-gray-50">
-        <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
-          <div className="mx-auto max-w-xl text-center">
+      <section className="relative bg-[url(https://images.tcdn.com.br/files/1112215/themes/1/img/settings/koh.png)] bg-fill bg-top lg:bg-right mr-0 lg:mr-12 md:mr-0 bg-no-repeat">
+        <div className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
+
+        <div className=" relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
+          <div className=" mt-12  w-full lg:max-w-xl  text-center ltr:sm:text-left rtl:sm:text-right">
             <h1 className="text-3xl font-extrabold sm:text-5xl">
-              App desenvolvido
-              <strong className="font-extrabold text-green-700 text-3xl my-4 sm:block">
+              Todo o seu sistema
+              <strong className="block font-extrabold text-green-700">
                 {" "}
-                Atráves do{" "}
-                <u>
-                  GR8 Sistema & Produtos <b>Legado</b>
-                </u>{" "}
+                Em um só lugar.{" "}
               </strong>
             </h1>
 
-            <p className="mt-4 sm:text-xl/relaxed">
-              Aplicacao construida emcima do <u>Microsoft Acess 2016</u>,
-              reformulada e desenvolvida para a web.
+            <p className="mt-4 max-w-lg sm:text-xl/relaxed">
+              Desenvolvida emcima da aplicação legado da <u>GRB</u> com muito
+              mais qualidade e facilidade 🚀
             </p>
 
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <div className="mt-8 w-full flex flex-wrap  items-center justify-center gap-4 text-center">
               <Button
+                size={"lg"}
                 onClick={() => {
                   return router.push("/dashboard");
                 }}
