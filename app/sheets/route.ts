@@ -45,10 +45,8 @@ export const GET = async () => {
       rows.forEach((row) => {
         // console.log(row.join(" , "));
         // console.log(row);
-        console.log(tag);
       });
     } else {
-      console.log("No data found in this range.");
     }
   });
 

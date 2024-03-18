@@ -76,24 +76,27 @@ const DynamicH3 = dynamic(
 export default async function Page() {
   const router = useRouter();
 
-  const productResponse = await fetch(
-    "http://localhost:3000/api/products" ||
-      "https://gr8-app.vercel.app/api/products",
-    {
-      next: { revalidate: 3600 },
-    }
-  );
+  // const productResponse = await fetch(
+  //   "http://localhost:3000/api/products" ||
+  //     "https://gr8-app.vercel.app/api/products",
+  //   {
+  //     next: { revalidate: 3600 },
+  //   }
+  // );
 
-  const budgetResponse = await fetch(
-    "http://localhost:3000/api/products" ||
-      "https://gr8-app.vercel.app/api/products",
-    {
-      next: { revalidate: 3600 },
-    }
-  );
+  // const budgetResponse = await fetch(
+  //   "http://localhost:3000/api/budget" ||
+  //     "https://gr8-app.vercel.app/api/products",
+  //   {
+  //     next: { revalidate: 3600 },
+  //   }
+  // );
 
-  const budget: BudgetsType = await budgetResponse.json();
-  const products: ProductsType = await productResponse.json();
+  // const budget: BudgetsType = await budgetResponse.json();
+  // const products: ProductsType = await productResponse.json();
+
+  const poducts = 212;
+  const budget = 524;
 
   return (
     <>
@@ -124,7 +127,7 @@ export default async function Page() {
             </DynamicH3>
           </CardHeader>
           <CardContent className=" transition-all p-6 bg-white back hover:m-2 hover:rounded-xl">
-            <DynamicH1>{products.length}</DynamicH1>
+            <DynamicH1>{poducts}</DynamicH1>
             <h5 className="mb-2 text-xl font-medium leading-tight text-success-600">
               Itens Cadastrados
             </h5>
@@ -132,16 +135,12 @@ export default async function Page() {
           <CardFooter className="border-t-2 border-success-600 px-6 py-3 bg-gray-100">
             <div className="w-full">
               <DynamicH4>
-                {productResponse.status == 200 && (
-                  <>
-                    <Button
-                      className="w-full "
-                      onClick={() => router.push("/dashboard/products")}
-                    >
-                      Acesso
-                    </Button>
-                  </>
-                )}
+                <Button
+                  className="w-full "
+                  onClick={() => router.push("/dashboard/products")}
+                >
+                  Acesso
+                </Button>
               </DynamicH4>
             </div>
           </CardFooter>
@@ -187,7 +186,7 @@ export default async function Page() {
             </DynamicH3>
           </CardHeader>
           <CardContent className=" transition-all p-6 bg-white back hover:m-2 hover:rounded-xl">
-            <DynamicH1>{budget.length}</DynamicH1>
+            <DynamicH1>{budget}</DynamicH1>
             <h5 className="mb-2 text-xl font-medium leading-tight text-success-600">
               Itens Cadastrados
             </h5>
@@ -195,16 +194,12 @@ export default async function Page() {
           <CardFooter className="border-t-2 border-success-600 px-6 py-3 bg-gray-100">
             <div className="w-full">
               <DynamicH4>
-                {productResponse.status == 200 && (
-                  <>
-                    <Button
-                      className="w-full "
-                      onClick={() => router.push("/dashboard/budget")}
-                    >
-                      Acesso
-                    </Button>
-                  </>
-                )}
+                <Button
+                  className="w-full "
+                  onClick={() => router.push("/dashboard/budget")}
+                >
+                  Acesso
+                </Button>
               </DynamicH4>
             </div>
           </CardFooter>
