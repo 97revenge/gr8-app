@@ -59,7 +59,13 @@ export default function BudgetTable() {
                 <TableCell className="font-medium text-center bg-white">
                   {item.ValorTotal}
                 </TableCell>
-                <TableCell className="font-medium text-center bg-white">
+                <TableCell
+                  className={
+                    item.DescSituacao == "A Confirmar"
+                      ? "font-medium text-center text-green-500"
+                      : "font-medium text-center text-red-500"
+                  }
+                >
                   {item.DescSituacao}
                 </TableCell>
                 <TableCell className="font-medium text-center bg-white">

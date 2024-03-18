@@ -21,8 +21,8 @@ const clients = z.array({
 });
 
 const products = z.array({
-  Codigo: z.string(),
-  Descricao: z.string(),
+  Codigo: z.string().min(1, { message: "Nescessário Código do produto" }),
+  Descricao: z.string().min(1, { message: "Nescessário Descrição do produto" }),
   codFornecedor: z.string(),
   Fabricante: z.string(),
 });
@@ -32,3 +32,5 @@ export interface BudgetsType extends z.infer<typeof budgets> {}
 export interface ClientsType extends z.infer<typeof clients> {}
 
 export interface ProductsType extends z.infer<typeof products> {}
+
+export { products };
