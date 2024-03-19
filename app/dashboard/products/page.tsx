@@ -227,7 +227,7 @@ export default function Home() {
       <div className="w-full">
         <div className="flex flex-col lg:flex-row  items-center py-4">
           <Input
-            placeholder="Procure pela descrição do produto mb-2"
+            placeholder="Procure pela descrição do produto "
             value={
               (table.getColumn("Descricao")?.getFilterValue() as string) ?? ""
             }
@@ -292,7 +292,7 @@ export default function Home() {
                     className="bg-gray-200 border border-b-2 border-gray-300"
                   >
                     {row.getVisibleCells().map((cell) => (
-                      <TableCell key={cell.id}>
+                      <TableCell key={cell.id} className="">
                         {flexRender(
                           cell.column.columnDef.cell,
                           cell.getContext()
