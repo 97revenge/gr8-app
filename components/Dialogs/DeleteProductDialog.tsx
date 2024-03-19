@@ -19,6 +19,8 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { useRouter } from "next/navigation";
 
+import { toast, Toaster } from "react-hot-toast";
+
 const CodigoSchema = z.object({
   id: z.number().optional(),
   Codigo: z.string().min(1, { message: "digite um código válido" }),
@@ -42,7 +44,9 @@ export default function DeleteProductDialog() {
         },
       });
 
-      response.statusText == "OK" && router.push("/dashboard");
+      response.statusText == "OK"
+        ? toast.success("Deletado com sucesso") && router.push("/dashboard")
+        : toast.error("Voçe teve um erro. Tente novamente");
     } catch (err) {
       alert(JSON.stringify(err));
     }
@@ -50,6 +54,7 @@ export default function DeleteProductDialog() {
 
   return (
     <>
+      <Toaster />
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Deletar Item</DialogTitle>

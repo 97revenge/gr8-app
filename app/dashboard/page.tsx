@@ -12,6 +12,8 @@ import { useRouter } from "next/navigation";
 
 import { useEffect, useState } from "react";
 
+import { Toaster, toast } from "react-hot-toast";
+
 const PageDynamic = dynamic(() => import("@/components/Layouts/MainLayout"), {
   loading: () => (
     <>
@@ -102,6 +104,7 @@ export default function Page() {
 
   return (
     <>
+      <Toaster position="top-center" />
       <HelloHeader />
       <PageDynamic>
         <DashboardCards>

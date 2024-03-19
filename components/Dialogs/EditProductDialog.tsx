@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "../ui/button";
 import {
   Dialog,
@@ -17,6 +19,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { ReactNode } from "react";
 
+import { toast, Toaster } from "react-hot-toast";
+import { useRouter } from "next/navigation";
+
 const productSchema = z.object({
   id: z.string().min(1, { message: "voce precisa colocar o ID correto" }),
   Codigo: z
@@ -28,6 +33,8 @@ const productSchema = z.object({
 });
 
 export default function EditProductDialog() {
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
@@ -46,7 +53,9 @@ export default function EditProductDialog() {
         },
       });
 
-      alert(response.statusText);
+      response.statusText == "OK"
+        ? toast.success("Editado com sucesso") && router.push("/dashboard")
+        : toast.error("Voçe teve um erro. Tente novamente");
     } catch (err) {
       alert(JSON.stringify(err));
     }
@@ -54,6 +63,7 @@ export default function EditProductDialog() {
 
   return (
     <>
+      <Toaster />
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Editar Item</DialogTitle>

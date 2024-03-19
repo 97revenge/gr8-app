@@ -45,8 +45,11 @@ export default function ProductDialog() {
         },
       });
       setStatus(response.status);
-      if (status == 200) {
-        return router.push("dashboard/products");
+      if (response.status == 200) {
+        toast.success("Registro criado com sucesso !!!");
+        return router.forward();
+      } else {
+        toast.error("Voce teve um erro, tente novamente...");
       }
     } catch (err) {
       alert(err);
@@ -95,9 +98,15 @@ export default function ProductDialog() {
 
           <DialogFooter>
             <div>
-              <Button type="submit" className="mt-2">
-                Confirmar
-              </Button>
+              {status === 200 ? (
+                <Button type="submit" className="mt-2 bg-red-500" disabled>
+                  Confirmar
+                </Button>
+              ) : (
+                <Button type="submit" className="mt-2 ">
+                  Confirmar
+                </Button>
+              )}
             </div>
           </DialogFooter>
         </form>
