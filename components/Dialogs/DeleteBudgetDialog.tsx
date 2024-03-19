@@ -26,7 +26,7 @@ const CodigoSchema = z.object({
   Codigo: z.string().min(1, { message: "digite um código válido" }),
 });
 
-export default function DeleteProductDialog() {
+export default function DeleteBudgetDialog() {
   const router = useRouter();
   const {
     register,
@@ -36,17 +36,18 @@ export default function DeleteProductDialog() {
 
   const handler = async (data: any) => {
     try {
-      const response = await fetch("/api/deleteProduct", {
-        method: "POST",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      // const response = await fetch("/api/editBudget", {
+      //   method: "POST",
+      //   body: JSON.stringify(data),
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      // });
 
-      response.status == 200
-        ? toast.success("Deletado com sucesso") && router.push("/dashboard")
-        : toast.error("Voçe teve um erro. Tente novamente ! ");
+      console.log(data);
+      // response.status == 200
+      //   ? toast.success("Deletado com sucesso") && router.push("/dashboard")
+      //   : toast.error("Voçe teve um erro. Tente novamente ! ");
     } catch (err) {
       alert(JSON.stringify(err));
     }
@@ -57,7 +58,7 @@ export default function DeleteProductDialog() {
       <Toaster />
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Deletar Produto</DialogTitle>
+          <DialogTitle>Deletar Orçamento</DialogTitle>
           <DialogDescription>
             Voce está deletando um item. Não é possivel refazer esta ação.
           </DialogDescription>
@@ -72,19 +73,19 @@ export default function DeleteProductDialog() {
             </div>
             <div>
               <Label>
-                Digite o <b>Código</b>
+                Digite o <b>Numero de Ordem</b>
               </Label>
               <Input
                 className="max-w-[100px]"
                 type="text"
-                {...register("Codigo")}
+                {...register("NumOrc")}
               ></Input>
             </div>
           </div>
           <DialogFooter>
-            {errors.Codigo?.message && (
+            {errors.NumOrc?.message && (
               <span className="mr-10 text-red-500 font-bold">
-                {errors.Codigo.message as React.ReactNode}
+                {errors.NumOrc.message as React.ReactNode}
               </span>
             )}
             <div>

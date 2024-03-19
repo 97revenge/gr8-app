@@ -27,7 +27,7 @@ export default function BudgetDialog() {
       <div className=" ">
         <DialogContent className=" ">
           <DialogHeader>
-            <DialogTitle>Registro</DialogTitle>
+            <DialogTitle>Registro de Orçamentos</DialogTitle>
             <DialogDescription>
               Voce está criando um item. essa opçâo pode ser excluida mais tarde
             </DialogDescription>

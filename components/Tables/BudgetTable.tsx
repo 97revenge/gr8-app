@@ -35,11 +35,14 @@ export default function BudgetTable() {
           <TableCaption>Lista de orçamentos </TableCaption>
           <TableHeader>
             <TableRow className="bg-gray-300 rounded-xl">
-              <TableHead>Numero de Orem</TableHead>
-              <TableHead className="text-center">Data de Emissao</TableHead>
+              <TableHead>ID</TableHead>
+              <TableHead>Numero de Ordem</TableHead>
+              <TableHead className="text-center">Data de emissão</TableHead>
               <TableHead>Nome do Cliente</TableHead>
               <TableHead className="text-right">Valor Total</TableHead>
-              <TableHead className="text-right">DescSituacao</TableHead>
+              <TableHead className="text-right">
+                Desconto <i> (especifico)</i>
+              </TableHead>
               <TableHead className="text-right">Data de Entrega</TableHead>
               <TableHead className="text-right">Nome do Vendedor</TableHead>
             </TableRow>
@@ -47,6 +50,9 @@ export default function BudgetTable() {
           <TableBody className="scroll-auto max-h-md overflow-y-auto">
             {budget.map((item) => (
               <TableRow key={item.id} className="scroll-auto">
+                <TableCell className="font-medium text-center text-white bg-gray-900  rounded-md">
+                  {item.id}
+                </TableCell>
                 <TableCell className="font-medium text-center bg-white">
                   {item.NumOrc}
                 </TableCell>

@@ -60,7 +60,7 @@ export default function ProductDialog() {
     <>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Registro</DialogTitle>
+          <DialogTitle>Registro de Produtos</DialogTitle>
           <DialogDescription>
             Voce está criando um item. essa opçâo pode ser excluida mais tarde
           </DialogDescription>
