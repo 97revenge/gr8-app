@@ -20,6 +20,7 @@ import { z } from "zod";
 import { useRouter } from "next/navigation";
 
 import { toast, Toaster } from "react-hot-toast";
+import CheckBoxDemo from "../CheckBoxes/CheckBoxDemo";
 
 const CodigoSchema = z.object({
   id: z.number().optional(),
@@ -81,6 +82,8 @@ export default function DeleteProductDialog() {
               ></Input>
             </div>
           </div>
+          <CheckBoxDemo />
+
           <DialogFooter>
             {errors.Codigo?.message && (
               <span className="mr-10 text-red-500 font-bold">

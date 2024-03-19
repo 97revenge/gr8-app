@@ -1,7 +1,7 @@
 "use client";
 
 import ProductDialog from "@/components/Dialogs/ProductDialog";
-import TableDemo from "@/components/Tables/TableDemo";
+import TableBreadCrumb from "@/components/Breadcrumbs/TableBreadcrumb";
 
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import dynamic from "next/dynamic";
@@ -345,26 +345,29 @@ export default function Home() {
   return (
     <>
       <div className="flex  flex-col p-6 items-center justify-center w-full h-full bg-gradient-to-r from-gray-100 to-teal-100">
+        <TableBreadCrumb>Produtos</TableBreadCrumb>
         <div className="p-12 mt-6 w-full">
-          <div className="flex flex-row w-full h-auto  items-center justify-start gap-3 p-2">
-            <Dialog>
-              <DialogTrigger>
-                <Button variant={"default"}>Adicionar </Button>
-              </DialogTrigger>
-              <ProductDialog />
-            </Dialog>
-            <Dialog>
-              <DialogTrigger>
-                <Button variant={"destructive"}>Excluir </Button>
-              </DialogTrigger>
-              <DeleteProductDialog />
-            </Dialog>
-            <Dialog>
-              <DialogTrigger>
-                <Button className="bg-blue-500">Editar </Button>
-              </DialogTrigger>
-              <EditProductDialog />
-            </Dialog>
+          <div className="  flex flex-row w-full h-auto  items-center justify-start gap-3 ">
+            <div className=" border border-2 border-gray-200 w-auto gap-x-3 flex items-center justify-start p-2 rounded-xl">
+              <Dialog>
+                <DialogTrigger>
+                  <Button variant={"default"}>Adicionar </Button>
+                </DialogTrigger>
+                <ProductDialog />
+              </Dialog>
+              <Dialog>
+                <DialogTrigger>
+                  <Button variant={"destructive"}>Excluir </Button>
+                </DialogTrigger>
+                <DeleteProductDialog />
+              </Dialog>
+              <Dialog>
+                <DialogTrigger>
+                  <Button className="bg-blue-500">Editar </Button>
+                </DialogTrigger>
+                <EditProductDialog />
+              </Dialog>
+            </div>
           </div>
           <Dynamic>
             <DataTableDemo />
