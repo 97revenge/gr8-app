@@ -44,7 +44,7 @@ export default function DeleteProductDialog() {
         },
       });
 
-      response.statusText == "OK"
+      response.status == 200
         ? toast.success("Deletado com sucesso") && router.push("/dashboard")
         : toast.error("Voçe teve um erro. Tente novamente ! ");
     } catch (err) {
