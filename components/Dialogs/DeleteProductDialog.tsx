@@ -46,7 +46,7 @@ export default function DeleteProductDialog() {
 
       response.statusText == "OK"
         ? toast.success("Deletado com sucesso") && router.push("/dashboard")
-        : toast.error("Voçe teve um erro. Tente novamente");
+        : toast.error("Voçe teve um erro. Tente novamente ! ");
     } catch (err) {
       alert(JSON.stringify(err));
     }
