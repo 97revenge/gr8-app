@@ -53,7 +53,7 @@ export default function EditProductDialog() {
         },
       });
 
-      response.statusText == "OK"
+      response.status == 200
         ? toast.success("Editado com sucesso") && router.push("/dashboard")
         : toast.error("Voçe teve um erro. Tente novamente");
     } catch (err) {
