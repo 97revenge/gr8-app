@@ -111,12 +111,10 @@ export default function Page() {
       <div className="my-4 bg-gray-300/50 shadow-xl rounded-xl mx-12 md:mx-44 lg:mx-44 grid grid-col-3 auto-rows-auto ">
         <PageDynamic>
           <div>
-            {products ? (
+            {products.length ? (
               <Badge className="relative top-2 animate-bounce">OnLine</Badge>
             ) : (
-              <Badge className="relative top-2 animate-bounce bg-red-500">
-                OffLine
-              </Badge>
+              <Badge className="relative top-2  bg-red-500">OffLine</Badge>
             )}
             <DashboardCards>
               <CardHeader className="border-b-2 border-success-600 px-6 py-3 bg-gray-100 ">
@@ -152,12 +150,23 @@ export default function Page() {
               <CardFooter className="border-t-2 border-success-600 px-6 py-3 bg-gray-100">
                 <div className="w-full">
                   <DynamicH4>
-                    <Button
-                      className="w-full "
-                      onClick={() => router.push("/dashboard/products")}
-                    >
-                      Acesso
-                    </Button>
+                    {products.length ? (
+                      <Button
+                        className="w-full "
+                        onClick={() => router.push("/dashboard/products")}
+                      >
+                        Acesso
+                      </Button>
+                    ) : (
+                      <Button
+                        variant={"destructive"}
+                        className="w-full  "
+                        disabled
+                        onClick={() => router.push("/dashboard/products")}
+                      >
+                        Acesso
+                      </Button>
+                    )}
                   </DynamicH4>
                 </div>
               </CardFooter>
@@ -167,9 +176,7 @@ export default function Page() {
             {budget.length ? (
               <Badge className="relative top-2 animate-bounce">OnLine</Badge>
             ) : (
-              <Badge className="relative top-2 animate-bounce bg-red-500">
-                OffLine
-              </Badge>
+              <Badge className="relative top-2  bg-red-500">OffLine</Badge>
             )}
             <DashboardCards>
               <CardHeader className="border-b-2 border-success-600 px-6 py-3 bg-gray-100 ">
@@ -221,12 +228,23 @@ export default function Page() {
               <CardFooter className="border-t-2 border-success-600 px-6 py-3 bg-gray-100">
                 <div className="w-full">
                   <DynamicH4>
-                    <Button
-                      className="w-full "
-                      onClick={() => router.push("/dashboard/budget")}
-                    >
-                      Acesso
-                    </Button>
+                    {budget.length ? (
+                      <Button
+                        className="w-full "
+                        onClick={() => router.push("/dashboard/budget")}
+                      >
+                        Acesso
+                      </Button>
+                    ) : (
+                      <Button
+                        variant={"destructive"}
+                        className="w-full  "
+                        disabled
+                        onClick={() => router.push("/dashboard/products")}
+                      >
+                        Acesso
+                      </Button>
+                    )}
                   </DynamicH4>
                 </div>
               </CardFooter>

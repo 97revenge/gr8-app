@@ -363,6 +363,7 @@ export default function Home() {
               <DialogTrigger>
                 <Button className="bg-blue-500">Editar </Button>
               </DialogTrigger>
+              <EditProductDialog />
             </Dialog>
           </div>
           <Dynamic>
