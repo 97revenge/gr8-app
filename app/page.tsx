@@ -4,13 +4,14 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
+import Image from "next/image";
 export default function Home() {
   const router = useRouter();
 
   return (
     <>
-      <section className="relative bg-[url(https://images.tcdn.com.br/files/1112215/themes/1/img/settings/koh.png)] bg-fill bg-top lg:bg-right mr-0 lg:mr-12 md:mr-0 bg-no-repeat">
-        <div className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
+      <section className="  bg-fill bg-top lg:bg-right mr-0 lg:mr-12 md:mr-0 bg-no-repeat">
+        <div className=" bg-[url(https://images.tcdn.com.br/files/1112215/themes/1/img/settings/koh.png)]  bg-no-repeat bg-fill bg-top absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"></div>
 
         <div className=" relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
           <div className=" mt-12  w-full lg:max-w-xl  text-center ltr:sm:text-left rtl:sm:text-right">

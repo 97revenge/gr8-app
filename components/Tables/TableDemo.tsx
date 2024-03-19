@@ -31,10 +31,10 @@ export default function TableDemo() {
   return (
     <>
       <div className="">
-        <Table className="scroll-auto">
+        <Table className="scroll-auto shadow-xl">
           <TableCaption>Lista de produtos </TableCaption>
           <TableHeader>
-            <TableRow className="bg-gray-300 rounded-xl">
+            <TableRow className="bg-gray-300  rounded-xl ">
               <TableHead>ID</TableHead>
               <TableHead>Codigo</TableHead>
               <TableHead className="text-center">Descrição</TableHead>
