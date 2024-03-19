@@ -51,6 +51,16 @@ import {
 import { BudgetsType, ProductsType } from "@/types";
 import { useEffect, useState } from "react";
 
+const Dynamic = dynamic(() => import("@/components/Layouts/TableLayout"), {
+  loading: () => (
+    <>
+      <div>
+        <PageLoader />
+      </div>
+    </>
+  ),
+});
+
 export default function Home() {
   const [products, setProducts] = useState<ProductsType>([] as any);
 
@@ -110,6 +120,13 @@ export default function Home() {
       enableHiding: false,
     },
     {
+      accessorKey: "id",
+      header: "ID do produto",
+      cell: ({ row }) => (
+        <div className="lowercase font-bold text-lg">{row.getValue("id")}</div>
+      ),
+    },
+    {
       accessorKey: "Codigo",
       header: ({ column }) => {
         return (
@@ -126,6 +143,7 @@ export default function Home() {
         <div className="lowercase">{row.getValue("Codigo")}</div>
       ),
     },
+
     {
       accessorKey: "Descricao",
       header: "Descrição do produto",
@@ -207,9 +225,9 @@ export default function Home() {
 
     return (
       <div className="w-full">
-        <div className="flex items-center py-4">
+        <div className="flex flex-col lg:flex-row  items-center py-4">
           <Input
-            placeholder="Procure pela descrição do produto"
+            placeholder="Procure pela descrição do produto mb-2"
             value={
               (table.getColumn("Descricao")?.getFilterValue() as string) ?? ""
             }
@@ -347,7 +365,9 @@ export default function Home() {
               </DialogTrigger>
             </Dialog>
           </div>
-          <DataTableDemo />
+          <Dynamic>
+            <DataTableDemo />
+          </Dynamic>
         </div>
       </div>
     </>

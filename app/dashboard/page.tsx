@@ -1,6 +1,7 @@
 "use client";
 
 import DashboardCards from "@/components/Cards/DashboardCards";
+import DashboardHeader from "@/components/Headers/DashboardHeader";
 
 import HelloHeader from "@/components/Headers/HelloHeader";
 import PageLoader from "@/components/Loaders/PageLoader";
