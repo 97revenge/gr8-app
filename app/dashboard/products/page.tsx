@@ -48,41 +48,26 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { BudgetsType } from "@/types";
+import { BudgetsType, ProductsType } from "@/types";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const data: Payment[] = [
-    {
-      id: "m5gr84i9",
-      amount: 316,
-      status: "success",
-      email: "ken99@yahoo.com",
-    },
-    {
-      id: "3u1reuv4",
-      amount: 242,
-      status: "success",
-      email: "Abe45@gmail.com",
-    },
-    {
-      id: "derv1ws0",
-      amount: 837,
-      status: "processing",
-      email: "Monserrat44@gmail.com",
-    },
-    {
-      id: "5kma53ae",
-      amount: 874,
-      status: "success",
-      email: "Silas22@gmail.com",
-    },
-    {
-      id: "bhqecj4p",
-      amount: 721,
-      status: "failed",
-      email: "carmella@hotmail.com",
-    },
-  ];
+  const [products, setProducts] = useState<ProductsType>([] as any);
+
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const productResponse = await fetch("/api/products");
+        const productsData = await productResponse.json();
+        setProducts(productsData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+    fetchData();
+  }, []);
+
+  const data = products;
 
   type Payment = {
     id: string;
@@ -91,7 +76,15 @@ export default function Home() {
     email: string;
   };
 
-  const columns: ColumnDef<Payment>[] = [
+  type Products = {
+    id: string;
+    Codigo: string;
+    Descricao: string;
+    codFornecedor?: string;
+    Fabricante: string;
+  };
+
+  const columns: ColumnDef<Products>[] = [
     {
       id: "select",
       header: ({ table }) => (
@@ -117,43 +110,42 @@ export default function Home() {
       enableHiding: false,
     },
     {
-      accessorKey: "status",
-      header: "Status",
-      cell: ({ row }) => (
-        <div className="capitalize">{row.getValue("status")}</div>
-      ),
-    },
-    {
-      accessorKey: "email",
+      accessorKey: "Codigo",
       header: ({ column }) => {
         return (
           <Button
             variant="ghost"
             onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           >
-            Email
+            Código do Produto
             <CaretSortIcon className="ml-2 h-4 w-4" />
           </Button>
         );
       },
       cell: ({ row }) => (
-        <div className="lowercase">{row.getValue("email")}</div>
+        <div className="lowercase">{row.getValue("Codigo")}</div>
       ),
     },
     {
-      accessorKey: "amount",
-      header: () => <div className="text-right">Amount</div>,
-      cell: ({ row }) => {
-        const amount = parseFloat(row.getValue("amount"));
-
-        // Format the amount as a dollar amount
-        const formatted = new Intl.NumberFormat("en-US", {
-          style: "currency",
-          currency: "USD",
-        }).format(amount);
-
-        return <div className="text-right font-medium">{formatted}</div>;
-      },
+      accessorKey: "Descricao",
+      header: "Descrição do produto",
+      cell: ({ row }) => (
+        <div className="lowercase">{row.getValue("Descricao")}</div>
+      ),
+    },
+    {
+      accessorKey: "codFornecedor",
+      header: "Código do fornecedor",
+      cell: ({ row }) => (
+        <div className="lowercase">{row.getValue("codFornecedor")}</div>
+      ),
+    },
+    {
+      accessorKey: "Fabricante",
+      header: "Fabricante",
+      cell: ({ row }) => (
+        <div className="lowercase">{row.getValue("Fabricante")}</div>
+      ),
     },
     {
       id: "actions",
@@ -187,22 +179,6 @@ export default function Home() {
   ];
 
   function DataTableDemo() {
-    const [budget, setBudget] = React.useState<BudgetsType>([]);
-
-    React.useEffect(() => {
-      async function fetchData() {
-        try {
-          const productResponse = await fetch("/api/api/products");
-          const productsData = await productResponse.json();
-          setBudget(productsData);
-          console.log(budget);
-        } catch (error) {
-          console.error("Error fetching data:", error);
-        }
-      }
-      fetchData();
-    }, []);
-
     const [sorting, setSorting] = React.useState<SortingState>([]);
     const [columnFilters, setColumnFilters] =
       React.useState<ColumnFiltersState>([]);
@@ -233,17 +209,19 @@ export default function Home() {
       <div className="w-full">
         <div className="flex items-center py-4">
           <Input
-            placeholder="Filter emails..."
-            value={(table.getColumn("email")?.getFilterValue() as string) ?? ""}
+            placeholder="Procure pela descrição do produto"
+            value={
+              (table.getColumn("Descricao")?.getFilterValue() as string) ?? ""
+            }
             onChange={(event) =>
-              table.getColumn("email")?.setFilterValue(event.target.value)
+              table.getColumn("Descricao")?.setFilterValue(event.target.value)
             }
             className="max-w-sm"
           />
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <Button variant="outline" className="ml-auto">
-                Columns <ChevronDownIcon className="ml-2 h-4 w-4" />
+                Especificações <ChevronDownIcon className="ml-2 h-4 w-4" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
@@ -267,14 +245,14 @@ export default function Home() {
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
-        <div className="rounded-md border">
+        <div className="rounded-md border shadow-xl">
           <Table>
             <TableHeader>
               {table.getHeaderGroups().map((headerGroup) => (
                 <TableRow key={headerGroup.id}>
                   {headerGroup.headers.map((header) => {
                     return (
-                      <TableHead key={header.id}>
+                      <TableHead key={header.id} className="bg-gray-400/50">
                         {header.isPlaceholder
                           ? null
                           : flexRender(
@@ -287,12 +265,13 @@ export default function Home() {
                 </TableRow>
               ))}
             </TableHeader>
-            <TableBody>
+            <TableBody className="rounded-xl shadow-xl">
               {table.getRowModel().rows?.length ? (
                 table.getRowModel().rows.map((row) => (
                   <TableRow
                     key={row.id}
                     data-state={row.getIsSelected() && "selected"}
+                    className="bg-gray-200 border border-b-2 border-gray-300"
                   >
                     {row.getVisibleCells().map((cell) => (
                       <TableCell key={cell.id}>
@@ -310,7 +289,7 @@ export default function Home() {
                     colSpan={columns.length}
                     className="h-24 text-center"
                   >
-                    No results.
+                    <b className="text-xl">Sem resultados .</b>
                   </TableCell>
                 </TableRow>
               )}
@@ -320,7 +299,7 @@ export default function Home() {
         <div className="flex items-center justify-end space-x-2 py-4">
           <div className="flex-1 text-sm text-muted-foreground">
             {table.getFilteredSelectedRowModel().rows.length} of{" "}
-            {table.getFilteredRowModel().rows.length} row(s) selected.
+            {table.getFilteredRowModel().rows.length} itens selecionados
           </div>
           <div className="space-x-2">
             <Button
@@ -329,7 +308,7 @@ export default function Home() {
               onClick={() => table.previousPage()}
               disabled={!table.getCanPreviousPage()}
             >
-              Previous
+              Anterior
             </Button>
             <Button
               variant="outline"
@@ -337,7 +316,7 @@ export default function Home() {
               onClick={() => table.nextPage()}
               disabled={!table.getCanNextPage()}
             >
-              Next
+              Próximo
             </Button>
           </div>
         </div>
