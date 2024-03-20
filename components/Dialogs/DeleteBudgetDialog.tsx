@@ -44,7 +44,9 @@ export default function DeleteBudgetDialog() {
         },
       });
       if (response.status == 200) {
-        return toast.success("Deletado com sucesso ");
+        return (
+          toast.success("Deletado com sucesso ") && router.push("/dashboard")
+        );
       } else {
         return toast.error("ocorreu um erro. tente novamente");
       }

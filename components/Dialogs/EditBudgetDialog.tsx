@@ -57,7 +57,23 @@ export default function EditBudgetDialog() {
   });
 
   const handler = async (data: any) => {
-    alert(JSON.stringify(data));
+    try {
+      const response = await fetch("/api/editBudget", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.status == 200) {
+        toast.success("Editado com sucesso") && router.push("/dashboard");
+      } else {
+        toast.error("aconteceu um erro, tente novamente");
+      }
+    } catch (err) {
+      alert(err);
+    }
   };
 
   return (
@@ -100,7 +116,7 @@ export default function EditBudgetDialog() {
 
           <div className="p-2  border border-2 rounded-xl my-2">
             <Label>Editar Data de emissão</Label>
-            <Input type="datetime-local" {...register("DtEmissao")}></Input>
+            <Input type="date" {...register("DtEmissao")}></Input>
 
             <Label>Editar Nome do Cliente</Label>
             <Input type="text" {...register("Nome_cli")}></Input>
@@ -108,7 +124,7 @@ export default function EditBudgetDialog() {
             <Label>Editar Valor Total</Label>
             <Input type="text" {...register("ValorTotal")}></Input>
             <Label>Editar Desconto</Label>
-            <Input type="text" {...register("DescSituacao")}></Input>
+            <Input type="search" {...register("DescSituacao")}></Input>
             <Label>Editar Data de Entrega</Label>
             <Input type="date" {...register("DataEntrega")}></Input>
             <Label>Editar Nome do Vendedor</Label>
