@@ -52,7 +52,6 @@ import { useEffect, useState } from "react";
 import BudgetDialog from "@/components/Dialogs/BudgetDialog";
 import DeleteBudgetDialog from "@/components/Dialogs/DeleteBudgetDialog";
 import EditBudgetDialog from "@/components/Dialogs/EditBudgetDialog";
-import BudgetTable from "@/components/Tables/BudgetTable";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -61,6 +60,7 @@ import {
   DialogHeader,
   DialogFooter,
 } from "@/components/ui/dialog";
+import CubeLoader from "@/components/Loaders/CubeLoader";
 
 export default function Home() {
   const [budgets, setBudgets] = useState<BudgetsType>([] as any);
@@ -199,10 +199,23 @@ export default function Home() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuLabel>Actions</DropdownMenuLabel>
+              <div className="p-2">
+                <Dialog>
+                  <DialogTrigger>Editar</DialogTrigger>
+                  <EditBudgetDialog
+                    status={{ id: payment.id, NumOrc: payment.NumOrc }}
+                  />
+                </Dialog>
+              </div>
               <DropdownMenuItem
                 onClick={() => navigator.clipboard.writeText(payment.id)}
               >
-                Copy payment ID
+                Copiar ID
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                onClick={() => navigator.clipboard.writeText(payment.NumOrc)}
+              >
+                Copiar Numero de Ordem
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem>View customer</DropdownMenuItem>
@@ -325,7 +338,9 @@ export default function Home() {
                     colSpan={columns.length}
                     className="h-24 text-center"
                   >
-                    <b className="text-xl">Sem resultados .</b>
+                    <div className="my-28  w-auto h-auto flex items-center justify-center">
+                      <CubeLoader />
+                    </div>
                   </TableCell>
                 </TableRow>
               )}

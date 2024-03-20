@@ -45,7 +45,11 @@ const mainSchema = z.object({
   Vend_Nome: z.string().optional(),
 });
 
-export default function EditBudgetDialog() {
+export default function EditBudgetDialog({
+  status = { id: "", NumOrc: "" },
+}: {
+  status?: { id: any; NumOrc: any };
+}) {
   const router = useRouter();
 
   const {
@@ -93,6 +97,7 @@ export default function EditBudgetDialog() {
               className="max-w-[100px]"
               type="text"
               {...register("id")}
+              defaultValue={status?.id}
             ></Input>
             {errors.id?.message && (
               <span className="text-sm font-bold text-red-500">
@@ -106,6 +111,7 @@ export default function EditBudgetDialog() {
               className="max-w-[100px]"
               type="text"
               {...register("NumOrc")}
+              defaultValue={status?.NumOrc}
             ></Input>
             {errors.NumOrc?.message && (
               <span className="text-sm font-bold text-red-500">
