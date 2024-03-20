@@ -49,6 +49,37 @@ model Produtos {
   @@map("produtos")
 }
 
+
+model Offer {
+  id       Int     @id @default(autoincrement())
+  client   String
+  date     String
+  email String? // email do cliente
+  number String? // numero do cliente
+  anotation String? // anotações  (se ja foi pago metade , ou alguma negociação manual)
+  shop String? // qual provedor de mercado (se o pedido é na shopee , mercado livre, e-commerce e etc)
+
+
+
+  orders   Order[]
+}
+
+model Order {
+  id            Int     @id @default(autoincrement())
+  amount        String
+  unit          String
+  code          String
+  description   String
+  unit_price    String
+
+  offer         Offer   @relation(fields: [offerId], references: [id])
+  offerId       Int
+}
+
+
+
+
+
 model Pedidos {
   id   Int    @id() @default(autoincrement())
   nome String

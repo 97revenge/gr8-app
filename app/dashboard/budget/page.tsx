@@ -198,11 +198,28 @@ export default function Home() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuLabel>Actions</DropdownMenuLabel>
-              <div className="p-2">
+              <DropdownMenuLabel>Ações </DropdownMenuLabel>
+              <div className="p-2 flex flex-col w-auto gap-y-2 flex items-center justify-center">
                 <Dialog>
-                  <DialogTrigger>Editar</DialogTrigger>
+                  <DialogTrigger>
+                    <Button className="transition-auto  rounded-md w-full bg-blue-500">
+                      Editar
+                    </Button>
+                  </DialogTrigger>
                   <EditBudgetDialog
+                    status={{ id: payment.id, NumOrc: payment.NumOrc }}
+                  />
+                </Dialog>
+                <Dialog>
+                  <DialogTrigger>
+                    <Button
+                      variant={"destructive"}
+                      className="transition-auto  rounded-md w-full "
+                    >
+                      Deletar
+                    </Button>
+                  </DialogTrigger>
+                  <DeleteBudgetDialog
                     status={{ id: payment.id, NumOrc: payment.NumOrc }}
                   />
                 </Dialog>
@@ -387,7 +404,7 @@ export default function Home() {
               <BudgetDialog />
             </Dialog>
             <Dialog>
-              <DialogTrigger>
+              <DialogTrigger className="">
                 <Button className="bg-blue-500">Editar </Button>
               </DialogTrigger>
               <EditBudgetDialog />
@@ -399,7 +416,9 @@ export default function Home() {
               <DeleteBudgetDialog />
             </Dialog>
           </div>
-          <DataTableDemo />
+          <div className="w-auto">
+            <DataTableDemo />
+          </div>
         </div>
       </div>
     </>

@@ -26,7 +26,14 @@ const mainSchema = z.object({
   NumOrc: z.string().min(1, { message: "digite um código válido" }),
 });
 
-export default function DeleteBudgetDialog() {
+export default function DeleteBudgetDialog({
+  status,
+}: {
+  status?: {
+    id: any;
+    NumOrc: any;
+  };
+}) {
   const router = useRouter();
   const {
     register,
@@ -71,7 +78,11 @@ export default function DeleteBudgetDialog() {
               <Label>
                 Digite o <b>ID</b>
               </Label>
-              <Input className="max-w-[100px]" {...register("id")}></Input>
+              <Input
+                defaultValue={status?.id}
+                className="max-w-[100px]"
+                {...register("id")}
+              ></Input>
               <div className="mt-4"></div>
             </div>
 
@@ -80,6 +91,7 @@ export default function DeleteBudgetDialog() {
                 Digite o <b>Numero de Ordem</b>
               </Label>
               <Input
+                defaultValue={status?.NumOrc}
                 className="max-w-[100px]"
                 type="text"
                 {...register("NumOrc")}

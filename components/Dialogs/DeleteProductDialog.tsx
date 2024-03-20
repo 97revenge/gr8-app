@@ -27,7 +27,11 @@ const CodigoSchema = z.object({
   Codigo: z.string().min(1, { message: "digite um código válido" }),
 });
 
-export default function DeleteProductDialog() {
+export default function DeleteProductDialog({
+  status,
+}: {
+  status?: { id: any; Codigo: any };
+}) {
   const router = useRouter();
   const {
     register,
@@ -69,7 +73,11 @@ export default function DeleteProductDialog() {
               <Label>
                 Digite o <b>ID</b>
               </Label>
-              <Input className="max-w-[100px]" {...register("id")}></Input>
+              <Input
+                defaultValue={status?.id}
+                className="max-w-[100px]"
+                {...register("id")}
+              ></Input>
             </div>
             <div>
               <Label>
@@ -78,6 +86,7 @@ export default function DeleteProductDialog() {
               <Input
                 className="max-w-[100px]"
                 type="text"
+                defaultValue={status?.Codigo}
                 {...register("Codigo")}
               ></Input>
             </div>

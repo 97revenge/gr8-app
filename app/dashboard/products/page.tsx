@@ -50,6 +50,7 @@ import {
 } from "@/components/ui/table";
 import { BudgetsType, ProductsType } from "@/types";
 import { useEffect, useState } from "react";
+import CubeLoader from "@/components/Loaders/CubeLoader";
 
 const Dynamic = dynamic(() => import("@/components/Layouts/TableLayout"), {
   loading: () => (
@@ -180,11 +181,41 @@ export default function Home() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuLabel>Actions</DropdownMenuLabel>
+              <DropdownMenuLabel>Ações </DropdownMenuLabel>
+              <div className="p-2 flex flex-col w-auto gap-y-2 flex items-center justify-center">
+                <Dialog>
+                  <DialogTrigger>
+                    <Button className="transition-auto  rounded-md w-full bg-blue-500">
+                      Editar
+                    </Button>
+                  </DialogTrigger>
+                  <EditProductDialog
+                    status={{ id: payment.id, Codigo: payment.Codigo }}
+                  />
+                </Dialog>
+                <Dialog>
+                  <DialogTrigger>
+                    <Button
+                      variant={"destructive"}
+                      className="transition-auto  rounded-md w-full "
+                    >
+                      Deletar
+                    </Button>
+                  </DialogTrigger>
+                  <DeleteProductDialog
+                    status={{ id: payment.id, Codigo: payment.Codigo }}
+                  />
+                </Dialog>
+              </div>
               <DropdownMenuItem
                 onClick={() => navigator.clipboard.writeText(payment.id)}
               >
-                Copy payment ID
+                Copiar ID
+              </DropdownMenuItem>
+              <DropdownMenuItem
+                onClick={() => navigator.clipboard.writeText(payment.Codigo)}
+              >
+                Copiar Numero de Ordem
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem>View customer</DropdownMenuItem>
@@ -307,7 +338,9 @@ export default function Home() {
                     colSpan={columns.length}
                     className="h-24 text-center"
                   >
-                    <b className="text-xl">Sem resultados .</b>
+                    <div className="my-28  w-auto h-auto flex items-center justify-center">
+                      <CubeLoader />
+                    </div>
                   </TableCell>
                 </TableRow>
               )}

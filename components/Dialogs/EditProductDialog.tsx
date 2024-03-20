@@ -32,7 +32,11 @@ const productSchema = z.object({
   Fabricante: z.string().optional(),
 });
 
-export default function EditProductDialog() {
+export default function EditProductDialog({
+  status,
+}: {
+  status?: { id: any; Codigo: any };
+}) {
   const router = useRouter();
 
   const {
@@ -77,6 +81,7 @@ export default function EditProductDialog() {
             <Input
               className="max-w-[100px]"
               type="text"
+              defaultValue={status?.id}
               {...register("id")}
             ></Input>
             {errors.id?.message && (
@@ -91,6 +96,7 @@ export default function EditProductDialog() {
               className="max-w-[100px]"
               type="text"
               {...register("Codigo")}
+              defaultValue={status?.Codigo}
             ></Input>
             {errors.Codigo?.message && (
               <span className="text-sm font-bold text-red-500">
