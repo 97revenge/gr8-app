@@ -1,6 +1,5 @@
 "use client";
 
-import { zodResolver } from "@hookform/resolvers/zod";
 import { Button } from "../ui/button";
 import {
   Dialog,
@@ -20,10 +19,11 @@ import { z } from "zod";
 import { useRouter } from "next/navigation";
 
 import { toast, Toaster } from "react-hot-toast";
+import { zodResolver } from "@hookform/resolvers/zod";
 
-const CodigoSchema = z.object({
-  id: z.number().optional(),
-  Codigo: z.string().min(1, { message: "digite um código válido" }),
+const mainSchema = z.object({
+  id: z.string().min(1, { message: "Digite um ID válido" }),
+  NumOrc: z.string().min(1, { message: "digite um código válido" }),
 });
 
 export default function DeleteBudgetDialog() {
@@ -32,24 +32,24 @@ export default function DeleteBudgetDialog() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({ resolver: zodResolver(mainSchema) });
 
   const handler = async (data: any) => {
     try {
-      // const response = await fetch("/api/editBudget", {
-      //   method: "POST",
-      //   body: JSON.stringify(data),
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //   },
-      // });
-
-      console.log(data);
-      // response.status == 200
-      //   ? toast.success("Deletado com sucesso") && router.push("/dashboard")
-      //   : toast.error("Voçe teve um erro. Tente novamente ! ");
+      const response = await fetch("/api/deleteBudget", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      if (response.status == 200) {
+        return toast.success("Deletado com sucesso ");
+      } else {
+        return toast.error("ocorreu um erro. tente novamente");
+      }
     } catch (err) {
-      alert(JSON.stringify(err));
+      alert(err);
     }
   };
 
@@ -70,7 +70,9 @@ export default function DeleteBudgetDialog() {
                 Digite o <b>ID</b>
               </Label>
               <Input className="max-w-[100px]" {...register("id")}></Input>
+              <div className="mt-4"></div>
             </div>
+
             <div>
               <Label>
                 Digite o <b>Numero de Ordem</b>
@@ -83,12 +85,17 @@ export default function DeleteBudgetDialog() {
             </div>
           </div>
           <DialogFooter>
-            {errors.NumOrc?.message && (
-              <span className="mr-10 text-red-500 font-bold">
-                {errors.NumOrc.message as React.ReactNode}
-              </span>
-            )}
-            <div>
+            <div className="flex items-center justify-between  w-full ">
+              {errors.id?.message && (
+                <span className="p2 text-sm mt-2 text-red-500 font-bold">
+                  {errors.id.message as React.ReactNode}
+                </span>
+              )}
+              {errors.NumOrc?.message && (
+                <span className=" text-sm text-red-500 font-bold">
+                  {errors.NumOrc.message as React.ReactNode}
+                </span>
+              )}
               <Dialog>
                 <DialogTrigger>
                   <Button type="submit" className="mt-2">

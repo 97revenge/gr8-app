@@ -32,6 +32,19 @@ import { useRouter } from "next/navigation";
 //   Fabricante: z.string().optional(),
 // });
 
+const mainSchema = z.object({
+  id: z.string().min(1, { message: "voce colocar o ID correto" }),
+  NumOrc: z
+    .string()
+    .min(1, { message: "voce precisa coloca o codigo de ordem correto" }),
+  DtEmissao: z.string().optional(),
+  Nome_cli: z.string().optional(),
+  ValorTotal: z.string().optional(),
+  DescSituacao: z.string().optional(),
+  DataEntrega: z.string().optional(),
+  Vend_Nome: z.string().optional(),
+});
+
 export default function EditBudgetDialog() {
   const router = useRouter();
 
@@ -39,24 +52,12 @@ export default function EditBudgetDialog() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    resolver: zodResolver(mainSchema),
+  });
 
   const handler = async (data: any) => {
-    // try {
-    //   const response = await fetch("/api/editProduct", {
-    //     method: "POST",
-    //     body: JSON.stringify(data),
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //   });
-    //   response.status == 200
-    //     ? toast.success("Editado com sucesso") && router.push("/dashboard")
-    //     : toast.error("Voçe teve um erro. Tente novamente");
-    // } catch (err) {
-    //   alert(JSON.stringify(err));
-    // }
-    console.log(data);
+    alert(JSON.stringify(data));
   };
 
   return (
@@ -69,7 +70,7 @@ export default function EditBudgetDialog() {
             Voce está editando um item. <b>Voce pode re-editar esta ação</b> .
           </DialogDescription>
         </DialogHeader>
-        <form action="POST" onSubmit={handleSubmit(handler)}>
+        <form action="post" onSubmit={handleSubmit(handler)}>
           <div>
             <Label>Digite o ID do item </Label>
             <Input
@@ -97,9 +98,9 @@ export default function EditBudgetDialog() {
             )}
           </div>
 
-          <div className="p-2 border border-2 rounded-xl my-2">
+          <div className="p-2  border border-2 rounded-xl my-2">
             <Label>Editar Data de emissão</Label>
-            <Input type="text" {...register("DtEmissao")}></Input>
+            <Input type="datetime-local" {...register("DtEmissao")}></Input>
 
             <Label>Editar Nome do Cliente</Label>
             <Input type="text" {...register("Nome_cli")}></Input>
@@ -108,8 +109,8 @@ export default function EditBudgetDialog() {
             <Input type="text" {...register("ValorTotal")}></Input>
             <Label>Editar Desconto</Label>
             <Input type="text" {...register("DescSituacao")}></Input>
-            <Label>Editar Valor Data de Entrega</Label>
-            <Input type="text" {...register("DataEntrega")}></Input>
+            <Label>Editar Data de Entrega</Label>
+            <Input type="date" {...register("DataEntrega")}></Input>
             <Label>Editar Nome do Vendedor</Label>
             <Input type="text" {...register("Vend_Nome")}></Input>
           </div>

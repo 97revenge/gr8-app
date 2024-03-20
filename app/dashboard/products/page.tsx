@@ -227,12 +227,12 @@ export default function Home() {
       <div className="w-full">
         <div className="flex flex-col lg:flex-row  items-center py-4">
           <Input
-            placeholder="Procure pela descrição do produto "
+            placeholder="Procure pelo Código do produto "
             value={
-              (table.getColumn("Descricao")?.getFilterValue() as string) ?? ""
+              (table.getColumn("Codigo")?.getFilterValue() as string) ?? ""
             }
             onChange={(event) =>
-              table.getColumn("Descricao")?.setFilterValue(event.target.value)
+              table.getColumn("Codigo")?.setFilterValue(event.target.value)
             }
             className="max-w-sm"
           />
