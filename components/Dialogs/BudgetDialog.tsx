@@ -50,7 +50,7 @@ export default function BudgetDialog() {
         },
       });
 
-      if (response.statusText == "OK") {
+      if (response.status == 200) {
         toast.success("ok , recebido ! ") && router.push("/dashboard");
       } else {
         toast.error("Erro ! ");
