@@ -80,13 +80,6 @@ export default function Home() {
 
   const data = products;
 
-  type Payment = {
-    id: string;
-    amount: number;
-    status: "pending" | "processing" | "success" | "failed";
-    email: string;
-  };
-
   type Products = {
     id: string;
     Codigo: string;
@@ -323,7 +316,10 @@ export default function Home() {
                     className="bg-gray-200 border border-b-2 border-gray-300"
                   >
                     {row.getVisibleCells().map((cell) => (
-                      <TableCell key={cell.id} className="">
+                      <TableCell
+                        key={cell.id}
+                        className="border border-2 border-gray-300 rounded-lg"
+                      >
                         {flexRender(
                           cell.column.columnDef.cell,
                           cell.getContext()

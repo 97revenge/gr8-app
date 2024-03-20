@@ -173,14 +173,14 @@ export default function Home() {
       accessorKey: "DataEntrega",
       header: "Data de entrega",
       cell: ({ row }) => (
-        <div className="lowercase">{row.getValue("DataEntrega")}</div>
+        <div className="lowercase ">{row.getValue("DataEntrega")}</div>
       ),
     },
     {
       accessorKey: "Vend_Nome",
       header: "Nome do vendedor",
       cell: ({ row }) => (
-        <div className="lowercase">{row.getValue("Vend_Nome")}</div>
+        <div className="lowercase ">{row.getValue("Vend_Nome")}</div>
       ),
     },
     {
@@ -272,7 +272,7 @@ export default function Home() {
     });
 
     return (
-      <div className="w-full">
+      <div className="w-full bg-red-200 p-2 rounded-xl bg-white bg-opacity-70">
         <div className="flex flex-col lg:flex-row  items-center py-4">
           <Input
             placeholder="Procure pelo nome do cliente"
@@ -298,7 +298,7 @@ export default function Home() {
                   return (
                     <DropdownMenuCheckboxItem
                       key={column.id}
-                      className="capitalize"
+                      className="font-bold "
                       checked={column.getIsVisible()}
                       onCheckedChange={(value: any) =>
                         column.toggleVisibility(!!value)
@@ -315,10 +315,10 @@ export default function Home() {
           <Table>
             <TableHeader>
               {table.getHeaderGroups().map((headerGroup) => (
-                <TableRow key={headerGroup.id}>
+                <TableRow key={headerGroup.id} className="">
                   {headerGroup.headers.map((header) => {
                     return (
-                      <TableHead key={header.id} className="bg-gray-400/50">
+                      <TableHead key={header.id} className="bg-gray-400/50 ">
                         {header.isPlaceholder
                           ? null
                           : flexRender(
@@ -331,16 +331,19 @@ export default function Home() {
                 </TableRow>
               ))}
             </TableHeader>
-            <TableBody className="rounded-xl shadow-xl">
+            <TableBody className="rounded-xl shadow-xl  ">
               {table.getRowModel().rows?.length ? (
                 table.getRowModel().rows.map((row) => (
                   <TableRow
                     key={row.id}
                     data-state={row.getIsSelected() && "selected"}
-                    className="bg-gray-200 border border-b-2 border-gray-300"
+                    className="bg-gray-200 border border-b-2 border-gray-300 "
                   >
                     {row.getVisibleCells().map((cell) => (
-                      <TableCell key={cell.id} className="">
+                      <TableCell
+                        key={cell.id}
+                        className="border border-2 border-gray-300 rounded-lg"
+                      >
                         {flexRender(
                           cell.column.columnDef.cell,
                           cell.getContext()
@@ -353,7 +356,7 @@ export default function Home() {
                 <TableRow>
                   <TableCell
                     colSpan={columns.length}
-                    className="h-24 text-center"
+                    className="h-24 text-center "
                   >
                     <div className="my-28  w-auto h-auto flex items-center justify-center">
                       <CubeLoader />
@@ -395,6 +398,7 @@ export default function Home() {
   return (
     <>
       <div className="flex  flex-col p-6 items-center justify-center w-full h-full bg-gradient-to-r from-gray-100 to-teal-100">
+        <TableBreadCrumb>Orçamento</TableBreadCrumb>
         <div className="p-12 mt-6">
           <div className="flex flex-row w-full h-auto  items-center justify-start gap-3 p-2">
             <Dialog>
