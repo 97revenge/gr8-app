@@ -17,7 +17,7 @@ import { useForm } from "react-hook-form";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { ReactNode, useState } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 import { toast, Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
@@ -31,6 +31,9 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
+import { SelectItem, SelectLabel } from "../ui/select";
+import { SelectDemo } from "../Selects/SelectDemo";
+import MultipleSelector from "../ui/multiple-selector";
 
 // const productSchema = z.object({
 //   id: z.string().min(1, { message: "voce precisa colocar o ID correto" }),
@@ -62,8 +65,6 @@ export default function EditBudgetDialog({
 }) {
   const router = useRouter();
 
-  const [process, setProcess] = useState<string>("Escolher");
-
   const {
     register,
     handleSubmit,
@@ -91,6 +92,7 @@ export default function EditBudgetDialog({
       alert(err);
     }
   };
+  const [selectedValue, setSelectedValue] = useState<any>(null);
 
   return (
     <>
@@ -142,41 +144,10 @@ export default function EditBudgetDialog({
             <Label>Editar Valor Total</Label>
             <Input type="text" {...register("ValorTotal")}></Input>
             <Label>Editar andamento</Label>
-            <div>
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="outline">{process}</Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent className="w-56">
-                  <DropdownMenuSeparator />
-                  <DropdownMenuRadioGroup>
-                    <DropdownMenuRadioItem
-                      value="top"
-                      onClick={() => setProcess("Não iniciado")}
-                    >
-                      Não iniciado
-                    </DropdownMenuRadioItem>
-                    <DropdownMenuRadioItem
-                      value="bottom"
-                      onClick={() => setProcess("A Comfirmar")}
-                    >
-                      Em andamento
-                    </DropdownMenuRadioItem>
-                    <DropdownMenuRadioItem
-                      value="right"
-                      onClick={() => setProcess("Finalizado")}
-                    >
-                      Finalizado
-                    </DropdownMenuRadioItem>
-                  </DropdownMenuRadioGroup>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </div>
+
             <Input
-              type="hidden"
-              defaultValue={
-                process == "Escolher" ? "A Comfirmar" : "Finalizado"
-              }
+              type="text"
+              placeholder="Digite 'Em andamento' ou 'Finalizado'"
               {...register("DescSituacao")}
             ></Input>
             <Label>Editar Data de Entrega</Label>

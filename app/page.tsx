@@ -63,7 +63,19 @@ export default function Home() {
                   type="submit"
                   variant={"shine"}
                 >
-                  Iniciar
+                  Sign in
+                </Button>
+
+                <Button
+                  size={"lg"}
+                  onClick={() => {
+                    return router.push("/dashboard");
+                  }}
+                  className="rounded-xl block w-full rounded  px-12 py-3 items-center text-sm font-medium text-white shadow hover:bg-green-700 focus:outline-none focus:ring active:bg-green-500 sm:w-auto"
+                  type="submit"
+                  variant={"shine"}
+                >
+                  Login
                 </Button>
               </motion.div>
             </div>

@@ -36,6 +36,12 @@ model Produtos {
   @@map("produtos")
 }
 
+model User {
+  id       Int    @id @default(autoincrement())
+  login    String
+  password String
+}
+
 model Order {
   id        Int      @id @default(autoincrement())
   client    String
@@ -63,4 +69,3 @@ model Content {
 
   @@map("content")
 }
-
