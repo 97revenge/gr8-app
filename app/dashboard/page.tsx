@@ -85,18 +85,23 @@ export default function Page() {
 
   const [budget, setBudget] = useState<BudgetsType>([]);
   const [products, setProducts] = useState<ProductsType>([] as any);
+  const [order, setOrder] = useState<Array<any>>([]);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const [productResponse, budgetResponse] = await Promise.all([
-          fetch("/api/products"),
-          fetch("/api/budget"),
-        ]);
+        const [productResponse, budgetResponse, orderResponse] =
+          await Promise.all([
+            fetch("/api/products"),
+            fetch("/api/budget"),
+            fetch("/api/order"),
+          ]);
         const productsData = await productResponse.json();
         const budgetData = await budgetResponse.json();
+        const orderData = await orderResponse.json();
         setProducts(productsData);
         setBudget(budgetData);
+        setOrder(orderData);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -251,9 +256,11 @@ export default function Page() {
             </DashboardCards>
           </div>
           <div>
-            <Badge variant={"destructive"} className="relative top-2 ">
-              Indisponivel
-            </Badge>
+            {order.length ? (
+              <Badge className="relative top-2 animate-bounce">OnLine</Badge>
+            ) : (
+              <Badge className="relative top-2  bg-red-500">OffLine</Badge>
+            )}
             <DashboardCards>
               <CardHeader className="border-b-2 border-success-600 px-6 py-3 bg-gray-100  ">
                 <DynamicH3>
@@ -298,6 +305,7 @@ export default function Page() {
                   </div>
                 </DynamicH3>
               </CardHeader>
+
               <CardContent className=" transition-all p-6 bg-white back hover:m-2 hover:rounded-xl">
                 <DynamicH1>0</DynamicH1>
                 <h5 className="mb-2 text-xl font-medium leading-tight text-success-600">

@@ -19,6 +19,7 @@ import DeleteProductDialog from "../Dialogs/DeleteProductDialog";
 import EditProductDialog from "../Dialogs/EditProductDialog";
 import EditBudgetDialog from "../Dialogs/EditBudgetDialog";
 import DeleteBudgetDialog from "../Dialogs/DeleteBudgetDialog";
+import CreateOrderDialog from "../Dialogs/CreateOrderDialog";
 
 const content: Array<React.ReactNode> = [
   <Dialog key={0}>
@@ -130,7 +131,7 @@ const content: Array<React.ReactNode> = [
                   </span>
                 </OptionsButton>
               </DialogTrigger>
-              <DialogContent>Ainda em Construção</DialogContent>
+              <CreateOrderDialog />
             </Dialog>
           </li>
           <Dialog>
