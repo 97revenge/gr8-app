@@ -4,6 +4,14 @@ import { PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
+export const POST = async (req: NextRequest) => {
+  const body = await req.json();
+
+  console.log(body);
+
+  return Response.json({ status: "ok" });
+};
+
 export const GET = async (req: NextRequest, res: NextResponse) => {
   const user = await prisma.user.findMany();
 

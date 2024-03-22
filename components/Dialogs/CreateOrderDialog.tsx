@@ -28,6 +28,15 @@ import { Textarea } from "../ui/textarea";
 import { useState } from "react";
 import { MaterialSymbolsArrowCircleRight as Right } from "../Icons/MaterialSymbolsArrowCircleRight";
 import { MaterialSymbolsArrowBack as Back } from "../Icons/MaterialSymbolsArrowBack";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../ui/carousel";
+import { Card, CardContent } from "../ui/card";
+import { Badge } from "../ui/badge";
 
 const optionSchema = z.object({
   label: z.string(),
@@ -42,12 +51,20 @@ const OPTIONS: Option[] = [
   { label: "Outros", value: "Outros" },
 ];
 
-const contentSchema = z.object({
+const mainContentSchema = z.object({
   amount: z.string(),
   unit: z.string(),
   code: z.string(),
   description: z.string(),
   unit_price: z.string(),
+});
+
+const mainSchema = z.object({
+  amount: z.string().optional(),
+  unit: z.string().optional(),
+  code: z.string().optional(),
+  description: z.string().optional(),
+  unit_price: z.string().optional(),
 });
 
 const formSchema = z.object({
@@ -60,7 +77,9 @@ const formSchema = z.object({
     .max(11, { message: "Maximo de 11 caracteres" }),
   annotation: z.string().optional(),
   shop: z.array(optionSchema).min(1),
-  content01: contentSchema,
+  content01: mainContentSchema,
+  content02: mainSchema,
+  content03: mainSchema,
 });
 
 export default function CreateOrderDialog() {
@@ -76,6 +95,8 @@ export default function CreateOrderDialog() {
       annotation: "",
       shop: [],
       content01: {},
+      content02: {},
+      content03: {},
     },
   });
 
@@ -87,10 +108,22 @@ export default function CreateOrderDialog() {
         email: data.email,
         number: data.number,
         shop: String(data.shop[0].value),
-        content: [data.content01],
+        content: [data.content01, data?.content02, data?.content03],
       };
 
-      return alert(JSON.stringify(instance));
+      const response = await fetch("/api/order", {
+        method: "POST",
+        body: JSON.stringify(instance),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+
+      if (response.status == 200 || response.statusText == "OK") {
+        return toast.success("ok enviado !!");
+      } else {
+        toast.error("Não Enviado!!");
+      }
     } catch (err) {
       alert(err);
     }
@@ -98,7 +131,7 @@ export default function CreateOrderDialog() {
 
   return (
     <>
-      <DialogContent>
+      <DialogContent className="w-[600px]">
         <DialogHeader>
           <DialogTitle>Registro de Pedidos</DialogTitle>
           <DialogDescription>
@@ -157,7 +190,7 @@ export default function CreateOrderDialog() {
                         <FormLabel>E-mail do cliente</FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="insira a data do pedido"
+                            placeholder="Insira o E-mail do cliente"
                             type="email"
                             {...field}
                           />
@@ -249,131 +282,427 @@ export default function CreateOrderDialog() {
               </>
             ) : (
               <div>
-                Pedido 01
-                <div className="grid grid-cols-2  gap-4 lg:grid-cols-3 lg:gap-8 w-full  p-2">
-                  <div className="flex  items-center justify-center text-center ">
-                    <FormField
-                      control={form.control}
-                      name="content01.amount"
-                      render={({ field }) => (
-                        <>
-                          <FormItem>
-                            <FormLabel>
-                              <span className="font-bold text-md">
-                                Quantidade
-                              </span>{" "}
-                            </FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder=" Quantidade"
-                                {...field}
-                                className="w-32"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        </>
-                      )}
-                    />
-                  </div>
-                  <div className="flex items-center justify-center text-center ">
-                    <FormField
-                      control={form.control}
-                      name="content01.unit"
-                      render={({ field }) => (
-                        <>
-                          <FormItem>
-                            <FormLabel>
-                              <span className="font-bold text-md">Unidade</span>{" "}
-                            </FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder=" Unidade"
-                                {...field}
-                                className="w-32"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        </>
-                      )}
-                    />
-                  </div>
-                  <div className="flex items-center justify-center text-center ">
-                    <FormField
-                      control={form.control}
-                      name="content01.code"
-                      render={({ field }) => (
-                        <>
-                          <FormItem>
-                            <FormLabel>
-                              <span className="font-bold text-md">Código</span>{" "}
-                            </FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder=" Código"
-                                {...field}
-                                className="w-32"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        </>
-                      )}
-                    />
-                  </div>
-                  <div className="flex items-center justify-center text-center ">
-                    <FormField
-                      control={form.control}
-                      name="content01.unit_price"
-                      render={({ field }) => (
-                        <>
-                          <FormItem>
-                            <FormLabel>
-                              <span className="font-bold text-md">
-                                Preço Unitario
-                              </span>{" "}
-                            </FormLabel>
-                            <FormControl>
-                              <Input
-                                placeholder=" Preço Unitario"
-                                {...field}
-                                className="w-32"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        </>
-                      )}
-                    />
-                  </div>
-                  <div className="relative left-24 lg:left-0 flex items-center justify-start text-center w-full  ">
-                    <FormField
-                      control={form.control}
-                      name="content01.description"
-                      render={({ field }) => (
-                        <>
-                          <FormItem>
-                            <FormLabel>
-                              <span className="font-bold text-md">
-                                Descrição
-                              </span>{" "}
-                            </FormLabel>
-                            <FormControl>
-                              <Textarea
-                                placeholder="Descrição do seu pedido"
-                                {...field}
-                                className="w-[250px] p-2"
-                              />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        </>
-                      )}
-                    />
-                  </div>
+                <Carousel>
+                  <CarouselContent className="border border-0">
+                    {Array.from([
+                      <div className="" key={0}>
+                        <Badge className="font-bold p-2 my-1 ">
+                          <span className="animate-pulse">Pedido 01</span>
+                        </Badge>
+
+                        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 flex items-center justify-center  border border-2 p-1 rounded-xl mb-2">
+                          <div className="flex  items-center justify-center text-center ">
+                            <FormField
+                              control={form.control}
+                              name="content01.amount"
+                              render={({ field }) => (
+                                <>
+                                  <FormItem>
+                                    <FormLabel>
+                                      <span className="font-bold text-md">
+                                        Quantidade
+                                      </span>{" "}
+                                    </FormLabel>
+                                    <FormControl>
+                                      <Input
+                                        placeholder=" Quantidade"
+                                        {...field}
+                                        className="w-32"
+                                      />
+                                    </FormControl>
+                                    <FormMessage />
+                                  </FormItem>
+                                </>
+                              )}
+                            />
+                          </div>
+                          <div className="flex items-center justify-center text-center ">
+                            <FormField
+                              control={form.control}
+                              name="content01.unit"
+                              render={({ field }) => (
+                                <>
+                                  <FormItem>
+                                    <FormLabel>
+                                      <span className="font-bold text-md">
+                                        Unidade
+                                      </span>{" "}
+                                    </FormLabel>
+                                    <FormControl>
+                                      <Input
+                                        placeholder=" Unidade"
+                                        {...field}
+                                        className="w-32"
+                                      />
+                                    </FormControl>
+                                    <FormMessage />
+                                  </FormItem>
+                                </>
+                              )}
+                            />
+                          </div>
+                          <div className="flex items-center justify-center text-center ">
+                            <FormField
+                              control={form.control}
+                              name="content01.code"
+                              render={({ field }) => (
+                                <>
+                                  <FormItem>
+                                    <FormLabel>
+                                      <span className="font-bold text-md">
+                                        Código
+                                      </span>{" "}
+                                    </FormLabel>
+                                    <FormControl>
+                                      <Input
+                                        placeholder=" Código"
+                                        {...field}
+                                        className="w-32"
+                                      />
+                                    </FormControl>
+                                    <FormMessage />
+                                  </FormItem>
+                                </>
+                              )}
+                            />
+                          </div>
+                          <div className="flex items-center justify-center text-center ">
+                            <FormField
+                              control={form.control}
+                              name="content01.unit_price"
+                              render={({ field }) => (
+                                <>
+                                  <FormItem>
+                                    <FormLabel>
+                                      <span className="font-bold text-md">
+                                        Preço Unitario
+                                      </span>{" "}
+                                    </FormLabel>
+                                    <FormControl>
+                                      <Input
+                                        placeholder=" Preço Unitario"
+                                        {...field}
+                                        className="w-32"
+                                      />
+                                    </FormControl>
+                                    <FormMessage />
+                                  </FormItem>
+                                </>
+                              )}
+                            />
+                          </div>
+                        </div>
+                        <div className="border border-2 p-1 rounded-xl flex items-center justify-start text-start w-full p-2  ">
+                          <FormField
+                            control={form.control}
+                            name="content01.description"
+                            render={({ field }) => (
+                              <>
+                                <FormItem>
+                                  <FormLabel>
+                                    <span className="font-bold text-md">
+                                      Descrição
+                                    </span>{" "}
+                                  </FormLabel>
+                                  <FormControl>
+                                    <Textarea
+                                      placeholder="Descrição do seu pedido"
+                                      {...field}
+                                      className="w-[400px] p-2"
+                                    />
+                                  </FormControl>
+                                  <FormMessage />
+                                </FormItem>
+                              </>
+                            )}
+                          />
+                        </div>
+                      </div>,
+                      <div className="" key={1}>
+                        <Badge className="font-bold p-2 my-1">
+                          <span className="animate-pulse">Pedido 02</span>
+                        </Badge>
+
+                        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 flex items-center justify-center  border border-2 p-1 rounded-xl mb-2">
+                          <div className="flex  items-center justify-center text-center ">
+                            <FormField
+                              control={form.control}
+                              name="content02.amount"
+                              render={({ field }) => (
+                                <>
+                                  <FormItem>
+                                    <FormLabel>
+                                      <span className="font-bold text-md">
+                                        Quantidade
+                                      </span>{" "}
+                                    </FormLabel>
+                                    <FormControl>
+                                      <Input
+                                        placeholder=" Quantidade"
+                                        {...field}
+                                        className="w-32"
+                                      />
+                                    </FormControl>
+                                    <FormMessage />
+                                  </FormItem>
+                                </>
+                              )}
+                            />
+                          </div>
+                          <div className="flex items-center justify-center text-center ">
+                            <FormField
+                              control={form.control}
+                              name="content02.unit"
+                              render={({ field }) => (
+                                <>
+                                  <FormItem>
+                                    <FormLabel>
+                                      <span className="font-bold text-md">
+                                        Unidade
+                                      </span>{" "}
+                                    </FormLabel>
+                                    <FormControl>
+                                      <Input
+                                        placeholder=" Unidade"
+                                        {...field}
+                                        className="w-32"
+                                      />
+                                    </FormControl>
+                                    <FormMessage />
+                                  </FormItem>
+                                </>
+                              )}
+                            />
+                          </div>
+                          <div className="flex items-center justify-center text-center ">
+                            <FormField
+                              control={form.control}
+                              name="content02.code"
+                              render={({ field }) => (
+                                <>
+                                  <FormItem>
+                                    <FormLabel>
+                                      <span className="font-bold text-md">
+                                        Código
+                                      </span>{" "}
+                                    </FormLabel>
+                                    <FormControl>
+                                      <Input
+                                        placeholder=" Código"
+                                        {...field}
+                                        className="w-32"
+                                      />
+                                    </FormControl>
+                                    <FormMessage />
+                                  </FormItem>
+                                </>
+                              )}
+                            />
+                          </div>
+                          <div className="flex items-center justify-center text-center ">
+                            <FormField
+                              control={form.control}
+                              name="content02.unit_price"
+                              render={({ field }) => (
+                                <>
+                                  <FormItem>
+                                    <FormLabel>
+                                      <span className="font-bold text-md">
+                                        Preço Unitario
+                                      </span>{" "}
+                                    </FormLabel>
+                                    <FormControl>
+                                      <Input
+                                        placeholder=" Preço Unitario"
+                                        {...field}
+                                        className="w-32"
+                                      />
+                                    </FormControl>
+                                    <FormMessage />
+                                  </FormItem>
+                                </>
+                              )}
+                            />
+                          </div>
+                        </div>
+                        <div className="border border-2 p-1 rounded-xl flex items-center justify-start text-start w-full p-2  ">
+                          <FormField
+                            control={form.control}
+                            name="content02.description"
+                            render={({ field }) => (
+                              <>
+                                <FormItem>
+                                  <FormLabel>
+                                    <span className="font-bold text-md">
+                                      Descrição
+                                    </span>{" "}
+                                  </FormLabel>
+                                  <FormControl>
+                                    <Textarea
+                                      placeholder="Descrição do seu pedido"
+                                      {...field}
+                                      className="w-[400px] p-2"
+                                    />
+                                  </FormControl>
+                                  <FormMessage />
+                                </FormItem>
+                              </>
+                            )}
+                          />
+                        </div>
+                      </div>,
+                      <div className="" key={2}>
+                        <Badge className="font-bold p-2 my-1">
+                          <span className="animate-pulse">Pedido 03</span>
+                        </Badge>
+
+                        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8 flex items-center justify-center  border border-2 p-1 rounded-xl mb-2">
+                          <div className="flex  items-center justify-center text-center ">
+                            <FormField
+                              control={form.control}
+                              name="content03.amount"
+                              render={({ field }) => (
+                                <>
+                                  <FormItem>
+                                    <FormLabel>
+                                      <span className="font-bold text-md">
+                                        Quantidade
+                                      </span>{" "}
+                                    </FormLabel>
+                                    <FormControl>
+                                      <Input
+                                        placeholder=" Quantidade"
+                                        {...field}
+                                        className="w-32"
+                                      />
+                                    </FormControl>
+                                    <FormMessage />
+                                  </FormItem>
+                                </>
+                              )}
+                            />
+                          </div>
+                          <div className="flex items-center justify-center text-center ">
+                            <FormField
+                              control={form.control}
+                              name="content03.unit"
+                              render={({ field }) => (
+                                <>
+                                  <FormItem>
+                                    <FormLabel>
+                                      <span className="font-bold text-md">
+                                        Unidade
+                                      </span>{" "}
+                                    </FormLabel>
+                                    <FormControl>
+                                      <Input
+                                        placeholder=" Unidade"
+                                        {...field}
+                                        className="w-32"
+                                      />
+                                    </FormControl>
+                                    <FormMessage />
+                                  </FormItem>
+                                </>
+                              )}
+                            />
+                          </div>
+                          <div className="flex items-center justify-center text-center ">
+                            <FormField
+                              control={form.control}
+                              name="content03.code"
+                              render={({ field }) => (
+                                <>
+                                  <FormItem>
+                                    <FormLabel>
+                                      <span className="font-bold text-md">
+                                        Código
+                                      </span>{" "}
+                                    </FormLabel>
+                                    <FormControl>
+                                      <Input
+                                        placeholder=" Código"
+                                        {...field}
+                                        className="w-32"
+                                      />
+                                    </FormControl>
+                                    <FormMessage />
+                                  </FormItem>
+                                </>
+                              )}
+                            />
+                          </div>
+                          <div className="flex items-center justify-center text-center ">
+                            <FormField
+                              control={form.control}
+                              name="content03.unit_price"
+                              render={({ field }) => (
+                                <>
+                                  <FormItem>
+                                    <FormLabel>
+                                      <span className="font-bold text-md">
+                                        Preço Unitario
+                                      </span>{" "}
+                                    </FormLabel>
+                                    <FormControl>
+                                      <Input
+                                        placeholder=" Preço Unitario"
+                                        {...field}
+                                        className="w-32"
+                                      />
+                                    </FormControl>
+                                    <FormMessage />
+                                  </FormItem>
+                                </>
+                              )}
+                            />
+                          </div>
+                        </div>
+                        <div className="border border-2 p-1 rounded-xl flex items-center justify-start text-start w-full p-2  ">
+                          <FormField
+                            control={form.control}
+                            name="content03.description"
+                            render={({ field }) => (
+                              <>
+                                <FormItem>
+                                  <FormLabel>
+                                    <span className="font-bold text-md">
+                                      Descrição
+                                    </span>{" "}
+                                  </FormLabel>
+                                  <FormControl>
+                                    <Textarea
+                                      placeholder="Descrição do seu pedido"
+                                      {...field}
+                                      className="w-[400px] p-2"
+                                    />
+                                  </FormControl>
+                                  <FormMessage />
+                                </FormItem>
+                              </>
+                            )}
+                          />
+                        </div>
+                      </div>,
+                    ]).map((item, index) => (
+                      <>
+                        <CarouselItem key={index} className="w-32">
+                          <Card>
+                            <CardContent>{item}</CardContent>
+                          </Card>
+                        </CarouselItem>
+                      </>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious />
+                  <CarouselNext />
+                </Carousel>
+                <div className="w-full ">
+                  <Button onClick={() => setView(!view)} className="w-full">
+                    {" "}
+                    Voltar e concluir pedido
+                  </Button>
                 </div>
-                <Back onClick={() => setView(!view)}></Back>
               </div>
             )}
           </form>
