@@ -307,7 +307,7 @@ export default function Page() {
               </CardHeader>
 
               <CardContent className=" transition-all p-6 bg-white back hover:m-2 hover:rounded-xl">
-                <DynamicH1>0</DynamicH1>
+                <DynamicH1>{order.length}</DynamicH1>
                 <h5 className="mb-2 text-xl font-medium leading-tight text-success-600">
                   Itens Cadastrados
                 </h5>
