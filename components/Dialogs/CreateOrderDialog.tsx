@@ -37,6 +37,11 @@ import {
 } from "../ui/carousel";
 import { Card, CardContent } from "../ui/card";
 import { Badge } from "../ui/badge";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuItem,
+} from "../ui/dropdown-menu";
 
 const optionSchema = z.object({
   label: z.string(),
@@ -247,7 +252,7 @@ export default function CreateOrderDialog() {
                   render={({ field }) => (
                     <div>
                       <FormItem>
-                        <FormLabel>Anotações adicionais</FormLabel>
+                        <FormLabel>Pedido feito pelo:</FormLabel>
                         <FormControl>
                           <MultipleSelector
                             value={field.value}

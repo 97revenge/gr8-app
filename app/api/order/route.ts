@@ -18,29 +18,21 @@ export const POST = async (req: NextRequest) => {
         shop: body.shop!,
         contents: {
           createMany: {
-            data: [
-              {
-                amount: body.content[0].amount!,
-                unit: body.content[0].unit!,
-                code: body.content[0].code!,
-                description: body.content[0].description!,
-                unit_price: body.content[0].unit_price!,
-              },
-              {
-                amount: body.content[1].amount!,
-                unit: body.content[1].unit!,
-                code: body.content[1].code!,
-                description: body.content[1].description!,
-                unit_price: body.content[1].unit_price!,
-              },
-              {
-                amount: body.content[2].amount!,
-                unit: body.content[2].unit!,
-                code: body.content[2].code!,
-                description: body.content[2].description!,
-                unit_price: body.content[2].unit_price!,
-              },
-            ],
+            data: body.content.map(
+              (content: {
+                amount: any;
+                unit: any;
+                code: any;
+                description: any;
+                unit_price: any;
+              }) => ({
+                amount: content.amount || "",
+                unit: content.unit || "",
+                code: content.code || "",
+                description: content.description || "",
+                unit_price: content.unit_price || "",
+              })
+            ),
           },
         },
       },

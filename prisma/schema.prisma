@@ -1,27 +1,21 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "postgresql"
-  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
 model ORCAMENTOS {
   id           Int     @id @default(autoincrement())
-  NumOrc       Int
+  DataEntrega  String?
+  DescSituacao String
   DtEmissao    String
   Nome_cli     String
+  NumOrc       Int
   ValorTotal   String
-  DescSituacao String
-  DataEntrega  String?
   Vend_Nome    String
 
   @@map("orcamento")
@@ -44,15 +38,14 @@ model User {
 }
 
 model Order {
-  id         Int     @id @default(autoincrement())
+  id         Int       @id @default(autoincrement())
   client     String
   date       String
   email      String?
   number     String?
   annotation String?
   shop       String?
-
-  contents Content[]
+  contents   Content[]
 
   @@map("order")
 }
@@ -64,9 +57,8 @@ model Content {
   code        String
   description String
   unit_price  String
-
-  order   Order @relation(fields: [orderId], references: [id])
-  orderId Int
+  orderId     Int
+  order       Order  @relation(fields: [orderId], references: [id])
 
   @@map("content")
 }
