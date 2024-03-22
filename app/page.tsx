@@ -5,6 +5,13 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
 import Image from "next/image";
+import {
+  Dialog,
+  DialogContent,
+  DialogFooter,
+  DialogHeader,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 export default function Home() {
   const router = useRouter();
 
@@ -53,31 +60,39 @@ export default function Home() {
             </p>
 
             <div className="mt-8 w-full flex flex-wrap  items-center justify-center gap-4 text-center">
-              <motion.div>
-                <Button
-                  size={"lg"}
-                  onClick={() => {
-                    return router.push("/dashboard");
-                  }}
-                  className="rounded-xl block w-full rounded  px-12 py-3 items-center text-sm font-medium text-white shadow hover:bg-green-700 focus:outline-none focus:ring active:bg-green-500 sm:w-auto"
-                  type="submit"
-                  variant={"shine"}
-                >
-                  Sign in
-                </Button>
+              <Dialog>
+                <motion.div className="flex flex-col gap-y-2 items-center justify-center">
+                  <DialogTrigger className="">
+                    <Button
+                      size={"lg"}
+                      onClick={() => {
+                        return router.push("/");
+                      }}
+                      className="rounded-xl block w-full rounded   py-3 items-center text-sm font-medium text-white shadow hover:bg-green-700 focus:outline-none focus:ring active:bg-green-500 sm:w-auto"
+                      type="submit"
+                      variant={"shine"}
+                    >
+                      Registrar - se
+                    </Button>
+                  </DialogTrigger>
+                  <DialogContent>
+                    <DialogHeader>Titulo</DialogHeader>
+                    <DialogFooter>Footer</DialogFooter>
+                  </DialogContent>
 
-                <Button
-                  size={"lg"}
-                  onClick={() => {
-                    return router.push("/dashboard");
-                  }}
-                  className="rounded-xl block w-full rounded  px-12 py-3 items-center text-sm font-medium text-white shadow hover:bg-green-700 focus:outline-none focus:ring active:bg-green-500 sm:w-auto"
-                  type="submit"
-                  variant={"shine"}
-                >
-                  Login
-                </Button>
-              </motion.div>
+                  <Button
+                    size={"lg"}
+                    onClick={() => {
+                      return router.push("/login");
+                    }}
+                    className="rounded-xl block w-full rounded   py-3 items-center text-sm font-medium text-white shadow hover:bg-green-700 focus:outline-none focus:ring active:bg-green-500 sm:w-auto"
+                    type="submit"
+                    variant={"shine"}
+                  >
+                    Entrar com login
+                  </Button>
+                </motion.div>
+              </Dialog>
             </div>
           </div>
         </div>
