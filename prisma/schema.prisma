@@ -62,3 +62,24 @@ model Content {
 
   @@map("content")
 }
+model Stock {
+  id              Int      @id @default(autoincrement())
+  PRODUTO         String
+  ESTOQUE_INICIAL Int
+  ENTRADAS        Int
+  SAIDAS          Int
+  ESTOQUE_FINAL   Int
+  updatedAt       DateTime @updatedAt
+
+  @@map("stock")
+}
+
+model Stock_Movimentation {
+  id      Int    @id @default(autoincrement())
+  date    String
+  type    String
+  product String
+  amount  Int?
+
+  @@map("stockMovimentation")
+}

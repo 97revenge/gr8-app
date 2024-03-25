@@ -1,0 +1,1100 @@
+[
+  {
+    "CodCli": 112,
+    "Nome_cli": "",
+    "Cnpj_cpf_cli": "",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "",
+    "Uf_Cli": ""
+  },
+  {
+    "CodCli": 85,
+    "Nome_cli": "Mega Light Indústria e Comércio Ltda",
+    "Cnpj_cpf_cli": "01.947.271/0001-11",
+    "Fone1_Cli": "4055-5455",
+    "Texto271": "compras1@megalight.ind.br",
+    "Cid_Cli": "Diadema",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 84,
+    "Nome_cli": "NCG Indústria e Comércio Ltda. - ME",
+    "Cnpj_cpf_cli": "08.915.533/0001-05",
+    "Fone1_Cli": "2782-4444",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "sp"
+  },
+  {
+    "CodCli": 86,
+    "Nome_cli": "ACMD Mat. Eletricos e Ilum. - EIRELI",
+    "Cnpj_cpf_cli": "32.540.722/0001-25",
+    "Fone1_Cli": "15-30232360",
+    "Texto271": "wender@acdmiluminacao.com.br",
+    "Cid_Cli": "Votorantim",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 113,
+    "Nome_cli": "Acrópoluz Comercial Ltda",
+    "Cnpj_cpf_cli": "13.450.692/0001-11",
+    "Fone1_Cli": "(31) 3448-2500",
+    "Texto271": "",
+    "Cid_Cli": "Horizonte   Minas Gerais",
+    "Uf_Cli": "mg"
+  },
+  {
+    "CodCli": 16,
+    "Nome_cli": "AD Cabos Coemrcial Ltda EPP",
+    "Cnpj_cpf_cli": "11.707.169/0001-00",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 94,
+    "Nome_cli": "ADRIANO ANTONIO DE FREITAS",
+    "Cnpj_cpf_cli": "37.410.296/0001-29",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "BADY BASSITT",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 74,
+    "Nome_cli": "Alexandre F. Mascarenhas 02108448764",
+    "Cnpj_cpf_cli": "29.045.160/0001-39",
+    "Fone1_Cli": "21-99146-6081",
+    "Texto271": "",
+    "Cid_Cli": "Rio de Janeiro",
+    "Uf_Cli": "RJ"
+  },
+  {
+    "CodCli": 63,
+    "Nome_cli": "Alexandre Vanzella ME",
+    "Cnpj_cpf_cli": "28.984.633/0001-09",
+    "Fone1_Cli": "(047) 2125- 2547",
+    "Texto271": "raphael@sohsoquetes.com.br",
+    "Cid_Cli": "Itajai",
+    "Uf_Cli": "SC"
+  },
+  {
+    "CodCli": 91,
+    "Nome_cli": "All Lux Com. Des. Tecn. P/ Ilum. EIRELI",
+    "Cnpj_cpf_cli": "21.287.067/0001-29",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "SÃO JOSE DO RIO PRETO",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 17,
+    "Nome_cli": "Anderson Ramos Cabos Me",
+    "Cnpj_cpf_cli": "05.256.325/0001-53",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 69,
+    "Nome_cli": "Andrea Rubio de Assis - ME -",
+    "Cnpj_cpf_cli": "20.815.867/0001-02",
+    "Fone1_Cli": "3565-1950",
+    "Texto271": "contato@mundialuz.com.br",
+    "Cid_Cli": "",
+    "Uf_Cli": ""
+  },
+  {
+    "CodCli": 15,
+    "Nome_cli": "Andy Cabos Comercial - EPP",
+    "Cnpj_cpf_cli": "10.363.680/0001-61",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 64,
+    "Nome_cli": "Associação dos Lojistas de Maua Plaza Shopping",
+    "Cnpj_cpf_cli": "07.195.708/0001-94",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "Maua",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 41,
+    "Nome_cli": "ATTENA IND. E COMÉRCIO DE ILUMINAÇÃO LTDA.",
+    "Cnpj_cpf_cli": "03.939.856/0001-15",
+    "Fone1_Cli": "(31) 3288-1718",
+    "Texto271": "compras@attena.com.br",
+    "Cid_Cli": "Belo Horizonte",
+    "Uf_Cli": "MG"
+  },
+  {
+    "CodCli": 106,
+    "Nome_cli": "Babilux Ind. e Com. Ltda",
+    "Cnpj_cpf_cli": "15.053.510/0001-02",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "Guarulhos",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 107,
+    "Nome_cli": "BH LED SERVIÇOS E COM. DE ILUM. LTDA",
+    "Cnpj_cpf_cli": "33.366.342/0001-89",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "BELO HORIZONTE",
+    "Uf_Cli": "MG"
+  },
+  {
+    "CodCli": 49,
+    "Nome_cli": "Borges e Mello",
+    "Cnpj_cpf_cli": "04.092.501/0001-04",
+    "Fone1_Cli": "5062-6805",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 19,
+    "Nome_cli": "BOSELI & BOSELI LTDA - EPP",
+    "Cnpj_cpf_cli": "08.037.579/0001-79",
+    "Fone1_Cli": "(17) 3524 9494",
+    "Texto271": "",
+    "Cid_Cli": "catanduva",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 110,
+    "Nome_cli": "C & Y LUSTRES E ILUMINACAO EIRELI",
+    "Cnpj_cpf_cli": "11.142.317/0001-89",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "SÃO PAULO",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 51,
+    "Nome_cli": "CARVALHO E SILVEIRA COMERCIO DE LUSTRES LTDA ME",
+    "Cnpj_cpf_cli": "07.954.652/0001-04",
+    "Fone1_Cli": "17-3521-7802",
+    "Texto271": "financeiro@i9led.com.br - Patricia",
+    "Cid_Cli": "CATANDUVA",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 13,
+    "Nome_cli": "Casa das Luminárias Ltda.",
+    "Cnpj_cpf_cli": "60.218.146/0001-30",
+    "Fone1_Cli": 3257.7691,
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 54,
+    "Nome_cli": "Cassia Elaine Rodrigues Menegario 25619148874",
+    "Cnpj_cpf_cli": "28.269.774/0001-31",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "Porto Ferreira",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 90,
+    "Nome_cli": "CAVEDINE COMERCIO DE ILUMINAÇAO",
+    "Cnpj_cpf_cli": "05.013.033/0001-90",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "CURITIBA",
+    "Uf_Cli": "PR"
+  },
+  {
+    "CodCli": 10,
+    "Nome_cli": "Comercial Favilla Ltda.",
+    "Cnpj_cpf_cli": "38.880.001/0001-40",
+    "Fone1_Cli": "3641-9955",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 117,
+    "Nome_cli": "CONCEPT LUMI ILUMINAÇÃO LTDA",
+    "Cnpj_cpf_cli": "27.267.526/0001-99",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "SÃO PAULO",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 38,
+    "Nome_cli": "Concinco Metalurgica Ind. e Com. Ltda",
+    "Cnpj_cpf_cli": "",
+    "Fone1_Cli": 3806.1611,
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 95,
+    "Nome_cli": "Cristiam Martins Januario Material Eletrico",
+    "Cnpj_cpf_cli": "10.716.245/0001-73",
+    "Fone1_Cli": "97669-3518",
+    "Texto271": "condu.energia@gmail.com",
+    "Cid_Cli": "São  Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 122,
+    "Nome_cli": "CRISTIAN FERREIRA 13 98817-7768",
+    "Cnpj_cpf_cli": "",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "GUARUJA",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 123,
+    "Nome_cli": "Dagel Ind. e Com. Ltda",
+    "Cnpj_cpf_cli": "",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 104,
+    "Nome_cli": "Dalecio  & Dalecio Ltda",
+    "Cnpj_cpf_cli": "13.808.922/0001-71",
+    "Fone1_Cli": "17-3045-7232",
+    "Texto271": "",
+    "Cid_Cli": "Catanduva",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 32,
+    "Nome_cli": "DB2 Ind e Com de Imp e Exp LTDA",
+    "Cnpj_cpf_cli": "12.668.093/0001-06",
+    "Fone1_Cli": "51 3653 7370",
+    "Texto271": "",
+    "Cid_Cli": "Taquari",
+    "Uf_Cli": "RS"
+  },
+  {
+    "CodCli": 77,
+    "Nome_cli": "DENISVALDO BRUNO ROVEDA - ILUMINACAO",
+    "Cnpj_cpf_cli": "30.557.743/0001-28",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "NOVA ALIANCA",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 18,
+    "Nome_cli": "Direção da Luz Indústria e Comércio de Luminárias EIRELI",
+    "Cnpj_cpf_cli": "11.285.689/0001-64",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "Guarulhos",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 89,
+    "Nome_cli": "DV CREATIVE LAMPS ARTIGOS DECORATIVOS , ILUM.E IMP. EIRELI",
+    "Cnpj_cpf_cli": "30.983.500/0001-51",
+    "Fone1_Cli": 210985708949,
+    "Texto271": "leiladionizio@leiladionizio.com.br",
+    "Cid_Cli": "Rio de janeiro",
+    "Uf_Cli": "RJ"
+  },
+  {
+    "CodCli": 114,
+    "Nome_cli": "E.L.D PROJETOS E ILUMINACAO LTDA",
+    "Cnpj_cpf_cli": "22.282.712/0001-83",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "SÃO PAULO",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 31,
+    "Nome_cli": "E-Led Iluminação EIRELI - ME",
+    "Cnpj_cpf_cli": "10.698.601/0001-73",
+    "Fone1_Cli": "2381-5962",
+    "Texto271": "",
+    "Cid_Cli": "São Bernardo do Campo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 79,
+    "Nome_cli": "Elétrica Minas Gerais Ltda ME",
+    "Cnpj_cpf_cli": "15.643.001/0001-21",
+    "Fone1_Cli": "37- 3232-7000",
+    "Texto271": "",
+    "Cid_Cli": "Pará de Minas",
+    "Uf_Cli": "MG"
+  },
+  {
+    "CodCli": 120,
+    "Nome_cli": "EQUILIBRIO",
+    "Cnpj_cpf_cli": "",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "SANTO ANDRE",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 70,
+    "Nome_cli": "Espaço Da Luz Ltda",
+    "Cnpj_cpf_cli": "61.390.639/0001-15",
+    "Fone1_Cli": "5021-5888",
+    "Texto271": "jeferson.dutra@eluz.ind.br",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 96,
+    "Nome_cli": "FABERSUL ME",
+    "Cnpj_cpf_cli": "39.287.133/0001-26",
+    "Fone1_Cli": "54) 999629607",
+    "Texto271": "",
+    "Cid_Cli": "",
+    "Uf_Cli": ""
+  },
+  {
+    "CodCli": 24,
+    "Nome_cli": "Falcon Silva Santos",
+    "Cnpj_cpf_cli": "27.069.776/0001-14",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 111,
+    "Nome_cli": "FALGE INDUSTRIAL EIRELI",
+    "Cnpj_cpf_cli": "18.406.998/0001-94",
+    "Fone1_Cli": "47-3084-2191",
+    "Texto271": "",
+    "Cid_Cli": "SCHROEDER",
+    "Uf_Cli": "SC"
+  },
+  {
+    "CodCli": 2,
+    "Nome_cli": "Farra Art. Desing. Ltda",
+    "Cnpj_cpf_cli": "02.778.166/0001-69",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "Curitiba",
+    "Uf_Cli": "PR"
+  },
+  {
+    "CodCli": 55,
+    "Nome_cli": "FG Iluminação Ltda",
+    "Cnpj_cpf_cli": "",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "São Caetano do Sul",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 93,
+    "Nome_cli": "FOCO METALLO FABR. E MONT.LUM.COM. EIRELI",
+    "Cnpj_cpf_cli": "22.670.837/0001-80",
+    "Fone1_Cli": ": (48) 3045-1228",
+    "Texto271": "(48) 99107-3892\nfocometallo@gmail.com",
+    "Cid_Cli": "Criciúma",
+    "Uf_Cli": "SC"
+  },
+  {
+    "CodCli": 83,
+    "Nome_cli": "Forceled Prod. De Ilum. Ltda",
+    "Cnpj_cpf_cli": "14.914.979/0001-18",
+    "Fone1_Cli": "51-99965-6628",
+    "Texto271": "compras@forceled.com.br",
+    "Cid_Cli": "Porto Alegre",
+    "Uf_Cli": "RS"
+  },
+  {
+    "CodCli": 119,
+    "Nome_cli": "GIRO LUMINARIAS EIRELI",
+    "Cnpj_cpf_cli": "39.807.905/0001-03",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "ITANHAEM",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 3,
+    "Nome_cli": "Grace Kelly Sist. Ilumi. Eireli - ME",
+    "Cnpj_cpf_cli": "24.690.994/0001-83",
+    "Fone1_Cli": "4328 0057",
+    "Texto271": "compras@cromalux.com.br",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 101,
+    "Nome_cli": "Guilherme Hervelha Chimenti",
+    "Cnpj_cpf_cli": "29.120.005/0001-30",
+    "Fone1_Cli": "2649-3649",
+    "Texto271": "guilherme.chimenti@gmail.com",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 1,
+    "Nome_cli": "Huntertrade Com e Mont. De Luminarias Ltda",
+    "Cnpj_cpf_cli": "12.130.072/0001-32",
+    "Fone1_Cli": "2384-0274",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 71,
+    "Nome_cli": "I.I..SLEMAN ILUMINAÇÃO COMÉRCIO IMPORTAÇÃO EPP",
+    "Cnpj_cpf_cli": "23.140.428/0001-35",
+    "Fone1_Cli": "16-31037777",
+    "Texto271": "",
+    "Cid_Cli": "RIBEIRAO PRETO",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 29,
+    "Nome_cli": "IFL COMERCIO DE ILUMINAÇÃO LTDA",
+    "Cnpj_cpf_cli": "97.527.335/0001-02",
+    "Fone1_Cli": "-4416 4028",
+    "Texto271": ": luz--vita@outlook.com",
+    "Cid_Cli": "Atibaia",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 80,
+    "Nome_cli": "Illuminato Proj.e Ilum. Ltda",
+    "Cnpj_cpf_cli": "01.275.639/0001-42",
+    "Fone1_Cli": "62 32163713",
+    "Texto271": "",
+    "Cid_Cli": "Goinania",
+    "Uf_Cli": "GO"
+  },
+  {
+    "CodCli": 118,
+    "Nome_cli": "ILUMINANDO COM ARTE",
+    "Cnpj_cpf_cli": "30.598.711/0001-70",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "",
+    "Uf_Cli": ""
+  },
+  {
+    "CodCli": 7,
+    "Nome_cli": "Immediate Fios e Cabos Especiais Ltda",
+    "Cnpj_cpf_cli": "",
+    "Fone1_Cli": "2741-9667",
+    "Texto271": "contato@cabosimmediate.com.br",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 28,
+    "Nome_cli": "Inove Iluminação Ltda",
+    "Cnpj_cpf_cli": "",
+    "Fone1_Cli": "4021-0448",
+    "Texto271": "compras@iluminacaoi9.com.br",
+    "Cid_Cli": "Salto",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 47,
+    "Nome_cli": "Interlight Sistemas de Iluminação Ltda.",
+    "Cnpj_cpf_cli": "58.329.608/0001-44",
+    "Fone1_Cli": "(11) 4789-9966.",
+    "Texto271": "tainara.ppcp@interlight.com.br",
+    "Cid_Cli": "Itapevi",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 97,
+    "Nome_cli": "Interlux Iluminação Ltda",
+    "Cnpj_cpf_cli": "00.449.147/0001-63",
+    "Fone1_Cli": "2259 0453",
+    "Texto271": "interluxiluminacao@uol.com.br",
+    "Cid_Cli": "",
+    "Uf_Cli": ""
+  },
+  {
+    "CodCli": 73,
+    "Nome_cli": "ISOLA C. F. CARVALHO & CIA LTDA.",
+    "Cnpj_cpf_cli": "61.230.777/0001-37",
+    "Fone1_Cli": "3257 2775",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 105,
+    "Nome_cli": "Itamonte  Iluminação EIRELI",
+    "Cnpj_cpf_cli": "27.160.810/0001-61",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 121,
+    "Nome_cli": "JM LUZEARTE ILUMINAÇÃO",
+    "Cnpj_cpf_cli": "",
+    "Fone1_Cli": "",
+    "Texto271": "DAGEL @DAGEL.COM.BR",
+    "Cid_Cli": "SÃO PAULO",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 59,
+    "Nome_cli": "KA Empreendimentos Ltda",
+    "Cnpj_cpf_cli": "81.340.135/0001-06",
+    "Fone1_Cli": "49-3321-3500",
+    "Texto271": "",
+    "Cid_Cli": "Chapeco",
+    "Uf_Cli": "SC"
+  },
+  {
+    "CodCli": 4,
+    "Nome_cli": "Laor Com. Prod. Iluminação Ltda EPP",
+    "Cnpj_cpf_cli": "23.492.186/0001-49",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 108,
+    "Nome_cli": "LED ILUMINAÇÕES LTDA ME",
+    "Cnpj_cpf_cli": "23.120.889/0001-46",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "Santo Andre",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 43,
+    "Nome_cli": "LICHT E LICHT DESIGN IND E COM LTDA",
+    "Cnpj_cpf_cli": "18.284.443/0001-17",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 33,
+    "Nome_cli": "LIG-BEM MATERIAIS ELETRICOS LTDA",
+    "Cnpj_cpf_cli": "49.402.696/0001-71",
+    "Fone1_Cli": "(19) 3801-8188",
+    "Texto271": "compras@ligbem.com.br",
+    "Cid_Cli": "Indaiatuba",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 44,
+    "Nome_cli": "LUSTRES HANSA LTDA EPP",
+    "Cnpj_cpf_cli": "56.993.520/0001-05",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "Itatiba",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 53,
+    "Nome_cli": "Lustres Pollio",
+    "Cnpj_cpf_cli": "",
+    "Fone1_Cli": "2671-9840",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 5,
+    "Nome_cli": "M&M Favilla Iluminação Ltda",
+    "Cnpj_cpf_cli": "08.304.935/0001-73",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 30,
+    "Nome_cli": "M2M Industria e Comercio Ltda",
+    "Cnpj_cpf_cli": "04.072.878/0003-55",
+    "Fone1_Cli": "21-3634-8010",
+    "Texto271": "compras@illuminare-rj.com.br",
+    "Cid_Cli": "Rio Bonito",
+    "Uf_Cli": "RJ"
+  },
+  {
+    "CodCli": 78,
+    "Nome_cli": "MARCA VENTO COM. VISUAL E MARK.LTDA - ME",
+    "Cnpj_cpf_cli": "04.415.317/0001-40",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "São Jose do Rio Preto",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 116,
+    "Nome_cli": "MARCELO VICTOR HERMETO",
+    "Cnpj_cpf_cli": "042.870.126-40",
+    "Fone1_Cli": "",
+    "Texto271": "Marcelo Victor Herméto [mvhermeto@gmail.com]",
+    "Cid_Cli": "BELO HORIZONTE",
+    "Uf_Cli": "MG"
+  },
+  {
+    "CodCli": 39,
+    "Nome_cli": "MARCIA REGINA BABIKIAN ME",
+    "Cnpj_cpf_cli": "04.688.269/0001-63",
+    "Fone1_Cli": "2422-1477",
+    "Texto271": "",
+    "Cid_Cli": "Guarulhos",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 75,
+    "Nome_cli": "Marines Araujo Oliveira",
+    "Cnpj_cpf_cli": "13.640.131/0001-85",
+    "Fone1_Cli": "71-3347-7000",
+    "Texto271": "",
+    "Cid_Cli": "Salvador",
+    "Uf_Cli": "BA"
+  },
+  {
+    "CodCli": 99,
+    "Nome_cli": "MC Cioffoletti Iluminação LTDA",
+    "Cnpj_cpf_cli": "05.155.556/0001-70",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "",
+    "Uf_Cli": ""
+  },
+  {
+    "CodCli": 68,
+    "Nome_cli": "Mei You Li - ME",
+    "Cnpj_cpf_cli": "28.312.099/0001-86",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 88,
+    "Nome_cli": "Meta Lumens",
+    "Cnpj_cpf_cli": "19.050.359/0001-00",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 57,
+    "Nome_cli": "Mixlami Iluminação Ltda",
+    "Cnpj_cpf_cli": "28.911.992/0001-28",
+    "Fone1_Cli": "4401-1452",
+    "Texto271": "",
+    "Cid_Cli": "Santo Andre",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 72,
+    "Nome_cli": "Morada Design Cortinas e Persianas – LTDA",
+    "Cnpj_cpf_cli": "18.199.439/0001-50",
+    "Fone1_Cli": "(34) 3255-4900",
+    "Texto271": "adm@unilightudi.com.br",
+    "Cid_Cli": "Uberlândia",
+    "Uf_Cli": "MG"
+  },
+  {
+    "CodCli": 6,
+    "Nome_cli": "Munclair Met. Com. Ltda - EPP",
+    "Cnpj_cpf_cli": "60.501.368/0001-65",
+    "Fone1_Cli": "2100-2423",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 67,
+    "Nome_cli": "Nair Fernandes Rosario - EPP",
+    "Cnpj_cpf_cli": "05.437.287/0001-35",
+    "Fone1_Cli": "2280-6800",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 81,
+    "Nome_cli": "Neolumen Iluminação",
+    "Cnpj_cpf_cli": "",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "",
+    "Uf_Cli": ""
+  },
+  {
+    "CodCli": 58,
+    "Nome_cli": "New Line Iluminação Ltda",
+    "Cnpj_cpf_cli": "12.077.181/0001-33",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "Suzano",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 62,
+    "Nome_cli": "NOBRE IND. E COM. DE ART. DE ALUMINIO LTDA - ME",
+    "Cnpj_cpf_cli": "00.017.788/0001-49",
+    "Fone1_Cli": "",
+    "Texto271": "comercial@nobrecores.com.br",
+    "Cid_Cli": "ARARAS",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 76,
+    "Nome_cli": "NOVA LUZ TECNOLOGIA DE ILUMINAÇAO LTDA",
+    "Cnpj_cpf_cli": "02.068.660/0001-30",
+    "Fone1_Cli": "(47) 3368-9585",
+    "Texto271": "mp@greenlighting.com.br",
+    "Cid_Cli": "BAL. CAMBORIU",
+    "Uf_Cli": "SC"
+  },
+  {
+    "CodCli": 40,
+    "Nome_cli": "Old Artisan Ltda",
+    "Cnpj_cpf_cli": "02.050.351/0001-32",
+    "Fone1_Cli": "4109-8999",
+    "Texto271": "financeiro@oldartisan.com.br",
+    "Cid_Cli": "São Bernardo do Campo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 34,
+    "Nome_cli": "Paulifio Ind. de Condutores Eletr. Ltda",
+    "Cnpj_cpf_cli": "",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "",
+    "Uf_Cli": ""
+  },
+  {
+    "CodCli": 48,
+    "Nome_cli": "Pétalas Douradas Com. E Serv.de Mon. LTDA ME",
+    "Cnpj_cpf_cli": "23.089.960/0001-75",
+    "Fone1_Cli": "4171-9584",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 98,
+    "Nome_cli": "PROJETA ILUM. MAT. ELETR. E CONST. LTDA",
+    "Cnpj_cpf_cli": "09.814.814/0001-34",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "RIBEIRAO PRETO",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 61,
+    "Nome_cli": "R CASTRO COM. DE MAT. ELET. LTDA",
+    "Cnpj_cpf_cli": "04.940.257/0001-84",
+    "Fone1_Cli": "(45)3327-2792",
+    "Texto271": "",
+    "Cid_Cli": "Cascavel",
+    "Uf_Cli": "PR"
+  },
+  {
+    "CodCli": 56,
+    "Nome_cli": "R DOS SANTOS COMERCIO DE ILUMINAÇÃO",
+    "Cnpj_cpf_cli": "30.031.382/0001-81",
+    "Fone1_Cli": "17 3211 2999",
+    "Texto271": "",
+    "Cid_Cli": "São Jose do Rio Preto",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 22,
+    "Nome_cli": "Ramirez Gauss da Silva EPP",
+    "Cnpj_cpf_cli": "11.205.991/0001-65",
+    "Fone1_Cli": "51-3024-8566",
+    "Texto271": "trybo.mkt@gmail.com",
+    "Cid_Cli": "Porto Alegre",
+    "Uf_Cli": "RS"
+  },
+  {
+    "CodCli": 103,
+    "Nome_cli": "Raquel Stoco Patricio Ilum. E Sincron.",
+    "Cnpj_cpf_cli": "33.566.919/0001-04",
+    "Fone1_Cli": "19-3481-6404",
+    "Texto271": "escnegri@uol.com.br",
+    "Cid_Cli": "São Pedro",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 36,
+    "Nome_cli": "Renato Martins Cioffoletti Ilum. EPP Itamonte",
+    "Cnpj_cpf_cli": "14.373.734/0001-20",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 46,
+    "Nome_cli": "Repuxação Fenix",
+    "Cnpj_cpf_cli": "",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 42,
+    "Nome_cli": "RMI Iluminação Ltda",
+    "Cnpj_cpf_cli": "04.407.645/0001-02",
+    "Fone1_Cli": "4355 7185",
+    "Texto271": "",
+    "Cid_Cli": "São Branardo do Campo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 65,
+    "Nome_cli": "RODRIGO SIVICO BARBOSA 22475353805",
+    "Cnpj_cpf_cli": "30.804.590/0001-76",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "Presidente Prudente",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 52,
+    "Nome_cli": "ROGÉRIO KOHLRAUSCH E CIA LTDA ME",
+    "Cnpj_cpf_cli": "02.097.107/0001-25",
+    "Fone1_Cli": ": 51 998560064",
+    "Texto271": "",
+    "Cid_Cli": "TAQUARA",
+    "Uf_Cli": "RS"
+  },
+  {
+    "CodCli": 20,
+    "Nome_cli": "Roky II Comércio de Lustres Ltda",
+    "Cnpj_cpf_cli": "60.955.200/0001-20",
+    "Fone1_Cli": "2351-4283",
+    "Texto271": "roky2comerciodelustres@hotmail.com",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 35,
+    "Nome_cli": "RotoplanetariaInd e Com . Ilum. Eireli- EPP",
+    "Cnpj_cpf_cli": "24.247.735/0001-82",
+    "Fone1_Cli": "2670-0591 Valeri",
+    "Texto271": "",
+    "Cid_Cli": "Mogi das Cruzes",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 102,
+    "Nome_cli": "S&L Imports Com. De Importação e Exp. De prod. Ilum.",
+    "Cnpj_cpf_cli": "33.765.312/0001-45",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 50,
+    "Nome_cli": "SALUT EIRELLI - EPP",
+    "Cnpj_cpf_cli": "24.551.984/0001-67",
+    "Fone1_Cli": "15 3459-9013",
+    "Texto271": "compras@tracodeluz.com.br",
+    "Cid_Cli": "Ipero",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 92,
+    "Nome_cli": "Salviano Com Var. Atac. Luminarias EIRELI",
+    "Cnpj_cpf_cli": "37.234.690/0001-53",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "Itaquaquecetuba",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 45,
+    "Nome_cli": "San German Industrial Ltda",
+    "Cnpj_cpf_cli": "06.141.078/0001-02",
+    "Fone1_Cli": "49-3633-0008",
+    "Texto271": "",
+    "Cid_Cli": "Santa Helena",
+    "Uf_Cli": "SC"
+  },
+  {
+    "CodCli": 66,
+    "Nome_cli": "Sanjardini Equip. Cine Foto Video Ltda",
+    "Cnpj_cpf_cli": "61.077.194/0001-18",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "",
+    "Uf_Cli": ""
+  },
+  {
+    "CodCli": 23,
+    "Nome_cli": "SIG - BEM Com. Mat. Eletr. Ltda",
+    "Cnpj_cpf_cli": "01.143.083/0001-30",
+    "Fone1_Cli": "3255-0592",
+    "Texto271": "sig-bem@uol.com.br",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 14,
+    "Nome_cli": "Spot Line Ind. E Comércio de Luminárias Ltda",
+    "Cnpj_cpf_cli": "66.187.279/0001-72",
+    "Fone1_Cli": "2621-3211",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 115,
+    "Nome_cli": "Studio Mdcor",
+    "Cnpj_cpf_cli": "",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "",
+    "Uf_Cli": ""
+  },
+  {
+    "CodCli": 8,
+    "Nome_cli": "T&T Iluminacao - Sandra Miguel Squecola",
+    "Cnpj_cpf_cli": "25.018.277/0001-72",
+    "Fone1_Cli": "",
+    "Texto271": "tetiluminacao@hotmail.com",
+    "Cid_Cli": "São Jose do Rio Preto",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 82,
+    "Nome_cli": "TC Ditudocasa Com. Imp. e Exp. Eireli",
+    "Cnpj_cpf_cli": "33.540.221/0001-01",
+    "Fone1_Cli": 16991262525,
+    "Texto271": "",
+    "Cid_Cli": "Ribeirao Preto",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 27,
+    "Nome_cli": "Tear Luminarias",
+    "Cnpj_cpf_cli": "",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "Osasco",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 11,
+    "Nome_cli": "THOMMY BONATTI ME",
+    "Cnpj_cpf_cli": "20.952.399/0001-18",
+    "Fone1_Cli": "",
+    "Texto271": "lojahommi@gmail.com",
+    "Cid_Cli": "Joinville",
+    "Uf_Cli": "SC"
+  },
+  {
+    "CodCli": 12,
+    "Nome_cli": "TonaBrasil  Com.Mat.Elet.Ltda - EPP",
+    "Cnpj_cpf_cli": "14.428.246/0001-73",
+    "Fone1_Cli": "3581-8760",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 100,
+    "Nome_cli": "Total Cabos EIRELI",
+    "Cnpj_cpf_cli": "04.238.165/0001-48",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "",
+    "Uf_Cli": ""
+  },
+  {
+    "CodCli": 25,
+    "Nome_cli": "TREE ART DECORAÇÕES LTDA-ME",
+    "Cnpj_cpf_cli": "27.438.565/0001-01",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "SÃO PAULO",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 9,
+    "Nome_cli": "USINA DESIGN IND E COMERCIO DE ILUMINAÇÃO LTDA.-ME",
+    "Cnpj_cpf_cli": "10.713.221/0001-60",
+    "Fone1_Cli": "(11) 4457-9531",
+    "Texto271": "",
+    "Cid_Cli": "Santo Andre",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 87,
+    "Nome_cli": "Vanfenix Com. De Luminarias Ltda - ME",
+    "Cnpj_cpf_cli": "28.238.729/0001-34",
+    "Fone1_Cli": "2910-1226",
+    "Texto271": "",
+    "Cid_Cli": "São Paulo",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 37,
+    "Nome_cli": "VERTICAL LUZ COM. E IND.  MAT.ELET.LTDA EPP",
+    "Cnpj_cpf_cli": "09.390.738/0001-87",
+    "Fone1_Cli": "(13) 3461-5497",
+    "Texto271": "rafael@verticaliluminacao.com.br",
+    "Cid_Cli": "São Vicente",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 60,
+    "Nome_cli": "Vilma T. de Queiroz Ind. De Lustres Epp",
+    "Cnpj_cpf_cli": "11.265.765/0001-70",
+    "Fone1_Cli": "3836-0805",
+    "Texto271": "admprimelight@ig.com.br",
+    "Cid_Cli": "Rio de Janeiro",
+    "Uf_Cli": "RJ"
+  },
+  {
+    "CodCli": 26,
+    "Nome_cli": "VOLARE VENTILADORES E LUMINARIAS - EIRELI",
+    "Cnpj_cpf_cli": "06.094.044/0001-04",
+    "Fone1_Cli": "(17) 32144343",
+    "Texto271": "",
+    "Cid_Cli": "São Jose do Rio Preto",
+    "Uf_Cli": "SP"
+  },
+  {
+    "CodCli": 109,
+    "Nome_cli": "WILLIAN ANDRADE GARCIA",
+    "Cnpj_cpf_cli": "30.130.841/0001-84",
+    "Fone1_Cli": "",
+    "Texto271": "",
+    "Cid_Cli": "PORTO ALEGRE",
+    "Uf_Cli": "RS"
+  }
+]

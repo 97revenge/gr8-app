@@ -1,0 +1,786 @@
+[
+  {
+    "PRODUTO": "Cabo PP 2x0,50mm 300V Branco/ Preto",
+    "ESTOQUE_INICIAL": 700,
+    "ENTRADAS": 4500,
+    "SAIDAS": "639,2",
+    "ESTOQUE_FINAL": "4560,8"
+  },
+  {
+    "PRODUTO": "Cabo PP 2x0,50mm Branco Para Vendas",
+    "ESTOQUE_INICIAL": 200,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 200
+  },
+  {
+    "PRODUTO": "Cabo PP Preto Flexível 0,50mm",
+    "ESTOQUE_INICIAL": 2500,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 2500
+  },
+  {
+    "PRODUTO": "Cabo PP Amarelo Flexível 0,50mm",
+    "ESTOQUE_INICIAL": 1200,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 1200
+  },
+  {
+    "PRODUTO": "Cabo coaxial 2x0,35mm cristal",
+    "ESTOQUE_INICIAL": 1000,
+    "ENTRADAS": 40,
+    "SAIDAS": 50,
+    "ESTOQUE_FINAL": 990
+  },
+  {
+    "PRODUTO": "Cabo Paralelo Cristal 2x0,13mm p/ fita led",
+    "ESTOQUE_INICIAL": 1400,
+    "ENTRADAS": 3160,
+    "SAIDAS": 2130,
+    "ESTOQUE_FINAL": 2430
+  },
+  {
+    "PRODUTO": "Cabo PP Cristal 2x0,20mm",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Cabo PP Cristal 2x0,50mm",
+    "ESTOQUE_INICIAL": 400,
+    "ENTRADAS": 0,
+    "SAIDAS": 200,
+    "ESTOQUE_FINAL": 200
+  },
+  {
+    "PRODUTO": "Cabo PP Cristal 2x0,50 mm – Aço",
+    "ESTOQUE_INICIAL": 1400,
+    "ENTRADAS": 1000,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 2400
+  },
+  {
+    "PRODUTO": "Cabo PP Branco 3x0,50mm",
+    "ESTOQUE_INICIAL": 500,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 500
+  },
+  {
+    "PRODUTO": "Cabo PP Cristal 2x0,13mm redondo",
+    "ESTOQUE_INICIAL": 1900,
+    "ENTRADAS": 0,
+    "SAIDAS": 300,
+    "ESTOQUE_FINAL": 1600
+  },
+  {
+    "PRODUTO": "Cabo PP Cristal 2x0,50mm cobre nu",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Cabo Cristal 2x0,13mm / 2,3mm – Veia Branca",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Cabo Preto Paralelo 2x0,20mm",
+    "ESTOQUE_INICIAL": 1600,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 1600
+  },
+  {
+    "PRODUTO": "Cabo Paralelo 2x0,50mm 300V Branco",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Cabo Filetado Paralelo 2x0,20: 475MTs",
+    "ESTOQUE_INICIAL": 475,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 475
+  },
+  {
+    "PRODUTO": "Cabo Filetado Paralelo 2x0,50",
+    "ESTOQUE_INICIAL": 400,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 400
+  },
+  {
+    "PRODUTO": "Cabo PP Cristal 2x0,13: 27x",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "cabo PP 1x0,50mm colorido",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Cabo PP Branco Fino 2x0,20",
+    "ESTOQUE_INICIAL": 1200,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 1200
+  },
+  {
+    "PRODUTO": "Cabo PP 2x0,50mm 500V Branco ou Preto",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Cabo PP 2x0,50mm Preto Com Alma Para Vendas",
+    "ESTOQUE_INICIAL": 200,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 200
+  },
+  {
+    "PRODUTO": "CABO DE AÇO 1,2MM 1,50 MTS C CABEÇA",
+    "ESTOQUE_INICIAL": 9,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 9
+  },
+  {
+    "PRODUTO": "CABO DE AÇO 1,2MM 1,50 MTS C CABEÇA",
+    "ESTOQUE_INICIAL": 15,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 15
+  },
+  {
+    "PRODUTO": "CABO DE AÇO 1,2MM 2,0 Mts C CABEÇA",
+    "ESTOQUE_INICIAL": 1,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 1
+  },
+  {
+    "PRODUTO": "Desviador de Cabo - Preto",
+    "ESTOQUE_INICIAL": 150,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 150
+  },
+  {
+    "PRODUTO": "Desviador de Cabo – Branco",
+    "ESTOQUE_INICIAL": 198,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 198
+  },
+  {
+    "PRODUTO": "Prensa Cabo de Aço 2,80mm Rosca M10",
+    "ESTOQUE_INICIAL": 11,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 11
+  },
+  {
+    "PRODUTO": "Fixador de teto – prensa cabo",
+    "ESTOQUE_INICIAL": 456,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 456
+  },
+  {
+    "PRODUTO": "Prensa Cabo Preto",
+    "ESTOQUE_INICIAL": 5,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 5
+  },
+  {
+    "PRODUTO": "Prensa Cabo Branco",
+    "ESTOQUE_INICIAL": 13,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 13
+  },
+  {
+    "PRODUTO": "Kit 2 prensa cabo + cabo de aço",
+    "ESTOQUE_INICIAL": 16,
+    "ENTRADAS": 0,
+    "SAIDAS": 2,
+    "ESTOQUE_FINAL": 14
+  },
+  {
+    "PRODUTO": "Trava cabo pequeno",
+    "ESTOQUE_INICIAL": 33,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 33
+  },
+  {
+    "PRODUTO": "Trava cabo plano",
+    "ESTOQUE_INICIAL": 148,
+    "ENTRADAS": 0,
+    "SAIDAS": 33,
+    "ESTOQUE_FINAL": 115
+  },
+  {
+    "PRODUTO": "Porca Cônica PVC MARROM",
+    "ESTOQUE_INICIAL": 144,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 144
+  },
+  {
+    "PRODUTO": "Porca Cônica PVC PRETO",
+    "ESTOQUE_INICIAL": 1950,
+    "ENTRADAS": 1,
+    "SAIDAS": 113,
+    "ESTOQUE_FINAL": 1838
+  },
+  {
+    "PRODUTO": "Porca Cônica PVC CRISTAL",
+    "ESTOQUE_INICIAL": 1818,
+    "ENTRADAS": 0,
+    "SAIDAS": 50,
+    "ESTOQUE_FINAL": 1768
+  },
+  {
+    "PRODUTO": "Porca Cônica PVC BRANCO",
+    "ESTOQUE_INICIAL": 250,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 250
+  },
+  {
+    "PRODUTO": "Prensa Cabo PVC PRETO",
+    "ESTOQUE_INICIAL": 728,
+    "ENTRADAS": 0,
+    "SAIDAS": 110,
+    "ESTOQUE_FINAL": 618
+  },
+  {
+    "PRODUTO": "Prensa Cabo PVC CRISTAL",
+    "ESTOQUE_INICIAL": 1822,
+    "ENTRADAS": 0,
+    "SAIDAS": 50,
+    "ESTOQUE_FINAL": 1772
+  },
+  {
+    "PRODUTO": "Prensa Cabo PVC BRANCO",
+    "ESTOQUE_INICIAL": 603,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 603
+  },
+  {
+    "PRODUTO": "Interruptor gangorra preto",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Interruptor gangorra branco",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Interruptor gangorra cristal",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Interruptor gangorra cristal IMPORTADO",
+    "ESTOQUE_INICIAL": 69,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 69
+  },
+  {
+    "PRODUTO": "Interruptor gangorra PRETO IMPORTADO",
+    "ESTOQUE_INICIAL": 93,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 93
+  },
+  {
+    "PRODUTO": "Interruptor gangorra BRANCO IMPORTADO",
+    "ESTOQUE_INICIAL": 96,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 96
+  },
+  {
+    "PRODUTO": "Interruptor de piso preto/ branco",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Dimmer Branco",
+    "ESTOQUE_INICIAL": 5,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 5
+  },
+  {
+    "PRODUTO": "Dimmer Preto",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Dimmer Cristal",
+    "ESTOQUE_INICIAL": 5,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 5
+  },
+  {
+    "PRODUTO": "Botão liga/ desliga quadrado",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Botão liga/ desliga redondo preto",
+    "ESTOQUE_INICIAL": 64,
+    "ENTRADAS": 0,
+    "SAIDAS": 50,
+    "ESTOQUE_FINAL": 14
+  },
+  {
+    "PRODUTO": "Botão liga/ desliga  redondo branco",
+    "ESTOQUE_INICIAL": 84,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 84
+  },
+  {
+    "PRODUTO": "Plug macho preto/branco",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Plug fêmea preto/branco",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Dimer Fita Led interruptor liga/desliga BRANCO",
+    "ESTOQUE_INICIAL": 6,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 6
+  },
+  {
+    "PRODUTO": "Cabo com Interruptor para fita led",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Cabo interruptor de alimentação",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Soquete Abajur E27 com rosca metal M10 – Preto - Liso",
+    "ESTOQUE_INICIAL": 94,
+    "ENTRADAS": 0,
+    "SAIDAS": 70,
+    "ESTOQUE_FINAL": 24
+  },
+  {
+    "PRODUTO": "Soquete Abajur E27 com rosca metal M10 – Branco - Liso",
+    "ESTOQUE_INICIAL": 47,
+    "ENTRADAS": 0,
+    "SAIDAS": 30,
+    "ESTOQUE_FINAL": 17
+  },
+  {
+    "PRODUTO": "Soquete Abajur E27 com rosca metal M10 – Preto – Corpo com Rosca",
+    "ESTOQUE_INICIAL": 195,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 195
+  },
+  {
+    "PRODUTO": "Soquete Abajur E27 com rosca metal M10 – Branco – Corpo com Rosca",
+    "ESTOQUE_INICIAL": 81,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 81
+  },
+  {
+    "PRODUTO": "Soquete E27  Abajur Preto",
+    "ESTOQUE_INICIAL": 222,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 222
+  },
+  {
+    "PRODUTO": "Soquete E27  Abajur Branco",
+    "ESTOQUE_INICIAL": 240,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 240
+  },
+  {
+    "PRODUTO": "Soquete E14 – Preto",
+    "ESTOQUE_INICIAL": 1,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 1
+  },
+  {
+    "PRODUTO": "Soquete E14 – Branco",
+    "ESTOQUE_INICIAL": 28,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 28
+  },
+  {
+    "PRODUTO": "Soquete G9 com Rosca M10",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Soquete de abajur E27 Importado",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Soquete G9 rosca",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Soquete G9 com rosca e suporte M10",
+    "ESTOQUE_INICIAL": 8,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 8
+  },
+  {
+    "PRODUTO": "Soquete G9 com rabicho 15cm",
+    "ESTOQUE_INICIAL": 225,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 225
+  },
+  {
+    "PRODUTO": "Soquete G9 liso com suporte",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Soquete liso E27",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Travessa Suporte",
+    "ESTOQUE_INICIAL": 70,
+    "ENTRADAS": 0,
+    "SAIDAS": 33,
+    "ESTOQUE_FINAL": 37
+  },
+  {
+    "PRODUTO": "Porca M10",
+    "ESTOQUE_INICIAL": 605,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 605
+  },
+  {
+    "PRODUTO": "Niple Zincado 10mm Rosca M10",
+    "ESTOQUE_INICIAL": 276,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 276
+  },
+  {
+    "PRODUTO": "Niple Zincado  15mm Rosca M10",
+    "ESTOQUE_INICIAL": 436,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 436
+  },
+  {
+    "PRODUTO": "Niple Zincado  20mm Rosca M10",
+    "ESTOQUE_INICIAL": 127,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 127
+  },
+  {
+    "PRODUTO": "Niple Zincado  25mm Rosca M10",
+    "ESTOQUE_INICIAL": 102,
+    "ENTRADAS": 0,
+    "SAIDAS": 3,
+    "ESTOQUE_FINAL": 99
+  },
+  {
+    "PRODUTO": "Niple Zincado 30mm Rosca M10",
+    "ESTOQUE_INICIAL": 219,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 219
+  },
+  {
+    "PRODUTO": "Niple Zincado  35mm Rosca M10",
+    "ESTOQUE_INICIAL": 83,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 83
+  },
+  {
+    "PRODUTO": "Niple Zincado  40mm Rosca M10",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Niple Zincado  45mm Rosca M10",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Niple Zincado  50mm Rosca M10",
+    "ESTOQUE_INICIAL": 84,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 84
+  },
+  {
+    "PRODUTO": "Niple Zincado  55mm Rosca M10",
+    "ESTOQUE_INICIAL": 185,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 185
+  },
+  {
+    "PRODUTO": "Niple Zincado  60mm Rosca M10",
+    "ESTOQUE_INICIAL": 201,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 201
+  },
+  {
+    "PRODUTO": "Niple Zincado  65mm Rosca M10",
+    "ESTOQUE_INICIAL": 149,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 149
+  },
+  {
+    "PRODUTO": "Niple Zincado  70mm Rosca M10",
+    "ESTOQUE_INICIAL": 333,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 333
+  },
+  {
+    "PRODUTO": "Niple Zincado  75mm Rosca M10",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Niple Zincado  80mm Rosca M10",
+    "ESTOQUE_INICIAL": 155,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 155
+  },
+  {
+    "PRODUTO": "Niple Zincado  85mm Rosca M10",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Niple Zincado  90mm Rosca M10",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Niple Zincado  95mm Rosca M10",
+    "ESTOQUE_INICIAL": 0,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 0
+  },
+  {
+    "PRODUTO": "Niple Zincado  100mm Rosca M10",
+    "ESTOQUE_INICIAL": 5,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 5
+  },
+  {
+    "PRODUTO": "Niple Zincado  1000mm Rosca M10",
+    "ESTOQUE_INICIAL": 6,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 6
+  },
+  {
+    "PRODUTO": "Pendente copo Liso PRETO brilhante",
+    "ESTOQUE_INICIAL": 21,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 21
+  },
+  {
+    "PRODUTO": "Pendente copo Liso PRETO fosco",
+    "ESTOQUE_INICIAL": 4,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 4
+  },
+  {
+    "PRODUTO": "Pendente copo Liso CEREJA/ VERMELHO",
+    "ESTOQUE_INICIAL": 3,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 3
+  },
+  {
+    "PRODUTO": "Pendente copo Liso AMARELO",
+    "ESTOQUE_INICIAL": 1,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 1
+  },
+  {
+    "PRODUTO": "Pendente copo Liso BRANCO",
+    "ESTOQUE_INICIAL": 1,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 1
+  },
+  {
+    "PRODUTO": "Pendente copo Liso PRATA",
+    "ESTOQUE_INICIAL": 4,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 4
+  },
+  {
+    "PRODUTO": "Pendente copo Liso OURO VELHO",
+    "ESTOQUE_INICIAL": 13,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 13
+  },
+  {
+    "PRODUTO": "Pendente copo Liso DOURADO",
+    "ESTOQUE_INICIAL": 1,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 1
+  },
+  {
+    "PRODUTO": "Pendente copo Liso ROSE (CLARO)",
+    "ESTOQUE_INICIAL": 73,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 73
+  },
+  {
+    "PRODUTO": "Pendente copo Liso ROSE GOLD",
+    "ESTOQUE_INICIAL": 1,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 1
+  },
+  {
+    "PRODUTO": "Pendente copo Liso MARFIM",
+    "ESTOQUE_INICIAL": 1,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 1
+  },
+  {
+    "PRODUTO": "Pendente Retrô CHINA OURO VELHO",
+    "ESTOQUE_INICIAL": 8,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 8
+  },
+  {
+    "PRODUTO": "Pendente Retrô CHINA ROSE",
+    "ESTOQUE_INICIAL": 5,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 5
+  },
+  {
+    "PRODUTO": "Pendente Retrô CHINA FUMÊ/ PRATA",
+    "ESTOQUE_INICIAL": 4,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 4
+  },
+  {
+    "PRODUTO": "Pendente Retrô CHINA CABO PRETO",
+    "ESTOQUE_INICIAL": 22,
+    "ENTRADAS": 0,
+    "SAIDAS": 0,
+    "ESTOQUE_FINAL": 22
+  }
+]

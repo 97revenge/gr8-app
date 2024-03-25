@@ -86,22 +86,26 @@ export default function Page() {
   const [budget, setBudget] = useState<BudgetsType>([]);
   const [products, setProducts] = useState<ProductsType>([] as any);
   const [order, setOrder] = useState<Array<any>>([]);
+  const [stock, setStock] = useState<Array<any>>([]);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const [productResponse, budgetResponse, orderResponse] =
+        const [productResponse, budgetResponse, orderResponse, stockResponse] =
           await Promise.all([
             fetch("/api/products"),
             fetch("/api/budget"),
             fetch("/api/order"),
+            fetch("/api/stock"),
           ]);
         const productsData = await productResponse.json();
         const budgetData = await budgetResponse.json();
         const orderData = await orderResponse.json();
+        const stockData = await stockResponse.json();
         setProducts(productsData);
         setBudget(budgetData);
         setOrder(orderData);
+        setStock(stockData);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -177,6 +181,7 @@ export default function Page() {
               </CardFooter>
             </DashboardCards>
           </div>
+
           <div>
             {budget.length ? (
               <Badge className="relative top-2 animate-bounce">OnLine</Badge>
@@ -321,6 +326,65 @@ export default function Page() {
                     >
                       Acesso
                     </Button>
+                  </DynamicH4>
+                </div>
+              </CardFooter>
+            </DashboardCards>
+          </div>
+          <div>
+            {stock?.length ? (
+              <Badge className="relative top-2 animate-bounce">OnLine</Badge>
+            ) : (
+              <Badge className="relative top-2  bg-red-500">OffLine</Badge>
+            )}
+            <DashboardCards>
+              <CardHeader className="border-b-2 border-success-600 px-6 py-3 bg-gray-100 ">
+                <DynamicH3>
+                  <div className="flex items-start justify-between">
+                    Estoque
+                    <div>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 24 24"
+                        className="fill-current text-green-600 "
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M6 20q-1.25 0-2.125-.875T3 17V8h18v9q0 1.25-.875 2.125T18 20zM3 7V5h6V4q0-.425.288-.712T10 3h4q.425 0 .713.288T15 4v1h6v2z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </DynamicH3>
+              </CardHeader>
+              <CardContent className=" transition-all p-6 bg-white back hover:m-2 hover:rounded-xl">
+                <DynamicH1>{stock.length}</DynamicH1>
+                <h5 className="mb-2 text-xl font-medium leading-tight text-success-600">
+                  Itens Cadastrados
+                </h5>
+              </CardContent>
+              <CardFooter className="border-t-2 border-success-600 px-6 py-3 bg-gray-100">
+                <div className="w-full">
+                  <DynamicH4>
+                    {stock?.length ? (
+                      <Button
+                        className="w-full "
+                        onClick={() => router.push("/dashboard/products")}
+                      >
+                        Acesso
+                      </Button>
+                    ) : (
+                      <Button
+                        variant={"destructive"}
+                        className="w-full  "
+                        disabled
+                        onClick={() => router.push("/dashboard/products")}
+                      >
+                        Acesso
+                      </Button>
+                    )}
                   </DynamicH4>
                 </div>
               </CardFooter>

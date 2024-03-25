@@ -2,19 +2,18 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
 
 import Image from "next/image";
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { useEffect, useState } from "react";
 export default function Home() {
-  const router = useRouter();
-
   return (
     <>
       <section className="bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white via-white to-green-600    w-screen flex items-center justify-center  bg-fill bg-top lg:bg-right mr-0 lg:mr-12 md:mr-0 bg-no-repeat">
@@ -36,6 +35,7 @@ export default function Home() {
                 />
               </svg>
               <span className="text-5xl my-2">Gerençiamento</span>
+
               <strong className="block font-extrabold text-green-700">
                 {" "}
                 Em um só lugar.{" "}
@@ -64,10 +64,8 @@ export default function Home() {
                 <motion.div className="flex flex-col gap-y-2 items-center justify-center">
                   <DialogTrigger className="">
                     <Button
+                      data-testid="button-element"
                       size={"lg"}
-                      onClick={() => {
-                        return router.push("/");
-                      }}
                       className="rounded-xl block w-full rounded   py-3 items-center text-sm font-medium text-white shadow hover:bg-green-700 focus:outline-none focus:ring active:bg-green-500 sm:w-auto"
                       type="submit"
                       variant={"shine"}
@@ -77,14 +75,14 @@ export default function Home() {
                   </DialogTrigger>
                   <DialogContent>
                     <DialogHeader>Titulo</DialogHeader>
+                    <DialogDescription>Hello World</DialogDescription>
                     <DialogFooter>Footer</DialogFooter>
                   </DialogContent>
 
                   <Button
+                    id="login-button"
+                    role="button"
                     size={"lg"}
-                    onClick={() => {
-                      return router.push("/login");
-                    }}
                     className="rounded-xl block w-full rounded   py-3 items-center text-sm font-medium text-white shadow hover:bg-green-700 focus:outline-none focus:ring active:bg-green-500 sm:w-auto"
                     type="submit"
                     variant={"shine"}
