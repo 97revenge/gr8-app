@@ -10,51 +10,6 @@ import {
 } from "@/components/ui/table";
 import { useEffect, useState } from "react";
 
-const invoices = [
-  {
-    invoice: "INV001",
-    paymentStatus: "Paid",
-    totalAmount: "$250.00",
-    paymentMethod: "Credit Card",
-  },
-  {
-    invoice: "INV002",
-    paymentStatus: "Pending",
-    totalAmount: "$150.00",
-    paymentMethod: "PayPal",
-  },
-  {
-    invoice: "INV003",
-    paymentStatus: "Unpaid",
-    totalAmount: "$350.00",
-    paymentMethod: "Bank Transfer",
-  },
-  {
-    invoice: "INV004",
-    paymentStatus: "Paid",
-    totalAmount: "$450.00",
-    paymentMethod: "Credit Card",
-  },
-  {
-    invoice: "INV005",
-    paymentStatus: "Paid",
-    totalAmount: "$550.00",
-    paymentMethod: "PayPal",
-  },
-  {
-    invoice: "INV006",
-    paymentStatus: "Pending",
-    totalAmount: "$200.00",
-    paymentMethod: "Bank Transfer",
-  },
-  {
-    invoice: "INV007",
-    paymentStatus: "Unpaid",
-    totalAmount: "$300.00",
-    paymentMethod: "Credit Card",
-  },
-];
-
 export default function TableDemo({ invoice }: { invoice: any }) {
   const [content, setContent] = useState<Array<any>>([]);
 
@@ -73,10 +28,10 @@ export default function TableDemo({ invoice }: { invoice: any }) {
 
   return (
     <>
-      <div className="mx-0 lg:mx-32 border border-4 rounded-xl m-2 p-2">
+      <div className="mx-0 lg:mx-32 border border-4 rounded-xl m-2 p-2 shadow-md">
         <Table>
           <TableCaption>
-            Esta lista representa o que o cliente pediu .{" "}
+            Esta lista representa o que o cliente pediu .
           </TableCaption>
           <TableHeader>
             <TableRow>

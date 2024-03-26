@@ -1,7 +1,6 @@
 "use client";
 
 import DashboardCards from "@/components/Cards/DashboardCards";
-import DashboardHeader from "@/components/Headers/DashboardHeader";
 
 import HelloHeader from "@/components/Headers/HelloHeader";
 import PageLoader from "@/components/Loaders/PageLoader";
@@ -95,7 +94,7 @@ export default function Page() {
           await Promise.all([
             fetch("/api/products"),
             fetch("/api/budget"),
-            fetch("/api/order"),
+            fetch("/api/totalOrder"),
             fetch("/api/stock"),
           ]);
         const productsData = await productResponse.json();

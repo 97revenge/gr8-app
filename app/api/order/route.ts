@@ -46,8 +46,14 @@ export const POST = async (req: NextRequest) => {
   }
 };
 
-export const GET = async (req: NextRequest, res: NextResponse) => {
-  const order = await prisma.order.findMany();
+export const GET = async (request: NextRequest) => {
+  const id = request.nextUrl.search;
 
-  return Response.json(order);
+  const content = await prisma.order.findMany({
+    where: {
+      id: Number(id.split("?")[1]),
+    },
+  });
+
+  return Response.json(content);
 };

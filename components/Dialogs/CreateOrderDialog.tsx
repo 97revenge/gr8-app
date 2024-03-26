@@ -42,6 +42,7 @@ import {
   DropdownMenuTrigger,
   DropdownMenuItem,
 } from "../ui/dropdown-menu";
+import { useRouter } from "next/navigation";
 
 const optionSchema = z.object({
   label: z.string(),
@@ -56,9 +57,21 @@ const OPTIONS: Option[] = [
   { label: "Outros", value: "Outros" },
 ];
 
+const uniType: Option[] = [
+  { label: "Centimetros", value: "Centimetros" },
+  { label: "Metros", value: "Metros" },
+  { label: "Unidade", value: "Unidade" },
+];
+
 const mainContentSchema = z.object({
   amount: z.string(),
-  unit: z.string(),
+  unit: z.array(
+    z.object({
+      label: z.string(),
+      value: z.string(),
+      disable: z.boolean().optional(),
+    })
+  ),
   code: z.string(),
   description: z.string(),
   unit_price: z.string(),
@@ -66,7 +79,13 @@ const mainContentSchema = z.object({
 
 const mainSchema = z.object({
   amount: z.string().optional(),
-  unit: z.string().optional(),
+  unit: z.array(
+    z.object({
+      label: z.string(),
+      value: z.string(),
+      disable: z.boolean().optional(),
+    })
+  ),
   code: z.string().optional(),
   description: z.string().optional(),
   unit_price: z.string().optional(),
@@ -99,9 +118,6 @@ export default function CreateOrderDialog() {
       number: "",
       annotation: "",
       shop: [],
-      content01: {},
-      content02: {},
-      content03: {},
     },
   });
 
@@ -113,7 +129,29 @@ export default function CreateOrderDialog() {
         email: data.email,
         number: data.number,
         shop: String(data.shop[0].value),
-        content: [data.content01, data?.content02, data?.content03],
+        content: [
+          {
+            amount: data.content01.amount,
+            unit: data.content01.unit[0].label,
+            code: data.content01.code,
+            description: data.content01.description,
+            unit_price: data.content01.unit_price,
+          },
+          {
+            amount: data.content02.amount,
+            unit: data.content02.unit[0].label,
+            code: data.content02.code,
+            description: data.content02.description,
+            unit_price: data.content02.unit_price,
+          },
+          {
+            amount: data.content03.amount,
+            unit: data.content03.unit[0].label,
+            code: data.content03.code,
+            description: data.content03.description,
+            unit_price: data.content03.unit_price,
+          },
+        ],
       };
 
       const response = await fetch("/api/order", {
@@ -125,12 +163,12 @@ export default function CreateOrderDialog() {
       });
 
       if (response.status == 200 || response.statusText == "OK") {
-        return toast.success("ok enviado !!");
+        return toast.success("Pedido enviado com sucesso");
       } else {
         toast.error("Não Enviado!!");
       }
     } catch (err) {
-      alert(err);
+      console.log(err);
     }
   };
 
@@ -235,7 +273,9 @@ export default function CreateOrderDialog() {
                       <FormItem>
                         <FormLabel>Anotações adicionais</FormLabel>
                         <FormControl>
-                          <Textarea
+                          <Input
+                            type="text"
+                            className="h-12 flex items-start justify-start"
                             placeholder="Digite anotações adicionais aqui..."
                             {...field}
                           />
@@ -334,10 +374,23 @@ export default function CreateOrderDialog() {
                                       </span>{" "}
                                     </FormLabel>
                                     <FormControl>
-                                      <Input
-                                        placeholder=" Unidade"
-                                        {...field}
-                                        className="w-32"
+                                      <MultipleSelector
+                                        className="w-36 px-2"
+                                        value={field.value}
+                                        onChange={field.onChange}
+                                        defaultOptions={uniType}
+                                        maxSelected={1}
+                                        onMaxSelected={() =>
+                                          toast.error(
+                                            "Voçe só pode adicionar um."
+                                          )
+                                        }
+                                        placeholder="Selecione unidade"
+                                        emptyIndicator={
+                                          <p className="text-center text-lg leading-10 text-gray-600 dark:text-gray-400">
+                                            Sem mais resultados
+                                          </p>
+                                        }
                                       />
                                     </FormControl>
                                     <FormMessage />
@@ -467,10 +520,23 @@ export default function CreateOrderDialog() {
                                       </span>{" "}
                                     </FormLabel>
                                     <FormControl>
-                                      <Input
-                                        placeholder=" Unidade"
-                                        {...field}
-                                        className="w-32"
+                                      <MultipleSelector
+                                        className="w-36 px-2"
+                                        value={field.value}
+                                        onChange={field.onChange}
+                                        defaultOptions={uniType}
+                                        maxSelected={1}
+                                        onMaxSelected={() =>
+                                          toast.error(
+                                            "Voçe só pode adicionar um."
+                                          )
+                                        }
+                                        placeholder="Selecione unidade"
+                                        emptyIndicator={
+                                          <p className="text-center text-lg leading-10 text-gray-600 dark:text-gray-400">
+                                            Sem mais resultados
+                                          </p>
+                                        }
                                       />
                                     </FormControl>
                                     <FormMessage />
@@ -600,10 +666,23 @@ export default function CreateOrderDialog() {
                                       </span>{" "}
                                     </FormLabel>
                                     <FormControl>
-                                      <Input
-                                        placeholder=" Unidade"
-                                        {...field}
-                                        className="w-32"
+                                      <MultipleSelector
+                                        className="w-36 px-2"
+                                        value={field.value}
+                                        onChange={field.onChange}
+                                        defaultOptions={uniType}
+                                        maxSelected={1}
+                                        onMaxSelected={() =>
+                                          toast.error(
+                                            "Voçe só pode adicionar um."
+                                          )
+                                        }
+                                        placeholder="Selecione unidade"
+                                        emptyIndicator={
+                                          <p className="text-center text-lg leading-10 text-gray-600 dark:text-gray-400">
+                                            Sem mais resultados
+                                          </p>
+                                        }
                                       />
                                     </FormControl>
                                     <FormMessage />
