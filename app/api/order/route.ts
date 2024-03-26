@@ -47,8 +47,6 @@ export const POST = async (req: NextRequest) => {
 };
 
 export const GET = async (req: NextRequest, res: NextResponse) => {
-  const user = await prisma.user.findMany();
-
   const order = await prisma.order.findMany();
 
   return Response.json(order);
