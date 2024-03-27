@@ -94,7 +94,7 @@ export default function Page() {
           await Promise.all([
             fetch("/api/products"),
             fetch("/api/budget"),
-            fetch("/api/totalOrder"),
+            fetch("/api/totalOrder", { next: { revalidate: 60 } }),
             fetch("/api/stock"),
           ]);
         const productsData = await productResponse.json();
@@ -319,12 +319,23 @@ export default function Page() {
               <CardFooter className="border-t-2 border-success-600 px-6 py-3 bg-gray-100">
                 <div className="w-full">
                   <DynamicH4>
-                    <Button
-                      className="w-full cursor-wait "
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      Acesso
-                    </Button>
+                    {order.length ? (
+                      <Button
+                        className="w-full "
+                        onClick={() => router.push("/dashboard/budget")}
+                      >
+                        Acesso
+                      </Button>
+                    ) : (
+                      <Button
+                        variant={"destructive"}
+                        className="w-full  "
+                        disabled
+                        onClick={() => router.push("/dashboard/products")}
+                      >
+                        Acesso
+                      </Button>
+                    )}
                   </DynamicH4>
                 </div>
               </CardFooter>
