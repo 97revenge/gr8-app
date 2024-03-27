@@ -79,13 +79,15 @@ const mainContentSchema = z.object({
 
 const mainSchema = z.object({
   amount: z.string().optional(),
-  unit: z.array(
-    z.object({
-      label: z.string().optional(),
-      value: z.string(),
-      disable: z.boolean().optional(),
-    })
-  ),
+  unit: z
+    .array(
+      z.object({
+        label: z.string().optional(),
+        value: z.string(),
+        disable: z.boolean().optional(),
+      })
+    )
+    .optional(),
   code: z.string().optional(),
   description: z.string().optional(),
   unit_price: z.string().optional(),
@@ -118,6 +120,9 @@ export default function CreateOrderDialog() {
       number: "",
       annotation: "",
       shop: [],
+      content01: {},
+      content02: {},
+      content03: {},
     },
   });
 
@@ -132,21 +137,21 @@ export default function CreateOrderDialog() {
         content: [
           {
             amount: data.content01.amount,
-            unit: data.content01.unit[0].label,
+            unit: data.content01?.unit[0]?.label,
             code: data.content01.code,
             description: data.content01.description,
             unit_price: data.content01.unit_price,
           },
           {
             amount: data.content02.amount,
-            unit: data.content02.unit[0].label,
+            unit: data.content02?.unit?.[0]?.label,
             code: data.content02.code,
             description: data.content02.description,
             unit_price: data.content02.unit_price,
           },
           {
             amount: data.content03.amount,
-            unit: data.content03.unit[0].label,
+            unit: data.content03?.unit?.[0]?.label,
             code: data.content03.code,
             description: data.content03.description,
             unit_price: data.content03.unit_price,
