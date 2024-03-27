@@ -14,8 +14,8 @@ import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 
 export interface Option {
-  value: string;
-  label: string;
+  value?: string;
+  label?: string;
   disable?: boolean;
   /** fixed option that can't be removed. */
   fixed?: boolean;

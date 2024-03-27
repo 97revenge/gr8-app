@@ -81,7 +81,7 @@ const mainSchema = z.object({
   amount: z.string().optional(),
   unit: z.array(
     z.object({
-      label: z.string(),
+      label: z.string().optional(),
       value: z.string(),
       disable: z.boolean().optional(),
     })
