@@ -321,7 +321,6 @@ export default function CreateOrderDialog() {
                 </div>
 
                 <Button type="submit" variant={"shine"} className="w-full">
-                  {" "}
                   enviar
                 </Button>
               </>
