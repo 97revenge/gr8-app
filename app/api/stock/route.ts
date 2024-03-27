@@ -1,8 +1,4 @@
-import { PrismaClient } from "@prisma/client";
-
-import { promises as fs } from "fs";
-
-const prisma = new PrismaClient();
+import { prisma } from "@/lib/prisma/prisma";
 
 export const GET = async () => {
   const stock = await prisma.stock.findMany();

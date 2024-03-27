@@ -1,8 +1,6 @@
+import { prisma } from "@/lib/prisma/prisma";
 import { NextRequest } from "next/server";
 
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
 export const GET = async (request: NextRequest) => {
   const id = request.nextUrl.search;
 

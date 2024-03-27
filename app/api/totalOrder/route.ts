@@ -1,10 +1,7 @@
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import { prisma } from "@/lib/prisma/prisma";
 
 export const GET = async () => {
   const order = await prisma.order.findMany();
-  console.log(order);
 
   return Response.json(order);
 };
