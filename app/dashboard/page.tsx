@@ -7,6 +7,11 @@ import PageLoader from "@/components/Loaders/PageLoader";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 import { BudgetsType, ProductsType } from "@/types";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/navigation";
@@ -259,88 +264,99 @@ export default function Page() {
               </CardFooter>
             </DashboardCards>
           </div>
-          <div>
-            {order.length ? (
-              <Badge className="relative top-2 animate-bounce">OnLine</Badge>
-            ) : (
-              <Badge className="relative top-2  bg-red-500">OffLine</Badge>
-            )}
-            <DashboardCards>
-              <CardHeader className="border-b-2 border-success-600 px-6 py-3 bg-gray-100  ">
-                <DynamicH3>
-                  <div className="flex items-start justify-between">
-                    Pedidos
-                    <div>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="32"
-                        height="32"
-                        viewBox="0 0 48 48"
-                        className="fill-current text-green-600"
-                      >
-                        <defs>
-                          <mask id="ipSAddMode0">
-                            <g
-                              fill="none"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                              stroke-miterlimit="10"
-                              stroke-width="4"
-                            >
-                              <path
-                                fill="#fff"
-                                stroke="#fff"
-                                d="m24.003 4l5.27 5.27h9.457v9.456l5.27 5.27l-5.27 5.278v9.456h-9.456L24.004 44l-5.278-5.27H9.27v-9.456L4 23.997l5.27-5.27V9.27h9.456z"
-                              />
-                              <path
-                                stroke="#000"
-                                d="M17 23.997h14M24.004 17v14"
-                              />
-                            </g>
-                          </mask>
-                        </defs>
-                        <path
-                          fill="currentColor"
-                          d="M0 0h48v48H0z"
-                          mask="url(#ipSAddMode0)"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </DynamicH3>
-              </CardHeader>
+          <HoverCard>
+            <HoverCardTrigger asChild>
+              <div>
+                {order.length ? (
+                  <Badge className="relative top-2 animate-bounce">
+                    OnLine
+                  </Badge>
+                ) : (
+                  <Badge className="relative top-2  bg-red-500">OffLine</Badge>
+                )}
+                <DashboardCards>
+                  <CardHeader className="border-b-2 border-success-600 px-6 py-3 bg-gray-100  ">
+                    <DynamicH3>
+                      <div className="flex items-start justify-between">
+                        Pedidos
+                        <div>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="32"
+                            height="32"
+                            viewBox="0 0 48 48"
+                            className="fill-current text-green-600"
+                          >
+                            <defs>
+                              <mask id="ipSAddMode0">
+                                <g
+                                  fill="none"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-miterlimit="10"
+                                  stroke-width="4"
+                                >
+                                  <path
+                                    fill="#fff"
+                                    stroke="#fff"
+                                    d="m24.003 4l5.27 5.27h9.457v9.456l5.27 5.27l-5.27 5.278v9.456h-9.456L24.004 44l-5.278-5.27H9.27v-9.456L4 23.997l5.27-5.27V9.27h9.456z"
+                                  />
+                                  <path
+                                    stroke="#000"
+                                    d="M17 23.997h14M24.004 17v14"
+                                  />
+                                </g>
+                              </mask>
+                            </defs>
+                            <path
+                              fill="currentColor"
+                              d="M0 0h48v48H0z"
+                              mask="url(#ipSAddMode0)"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </DynamicH3>
+                  </CardHeader>
 
-              <CardContent className=" transition-all p-6 bg-white back hover:m-2 hover:rounded-xl">
-                <DynamicH1>{order.length}</DynamicH1>
-                <h5 className="mb-2 text-xl font-medium leading-tight text-success-600">
-                  Itens Cadastrados
-                </h5>
-              </CardContent>
-              <CardFooter className="border-t-2 border-success-600 px-6 py-3 bg-gray-100">
-                <div className="w-full">
-                  <DynamicH4>
-                    {order.length ? (
-                      <Button
-                        className="w-full "
-                        onClick={() => router.push("/dashboard/budget")}
-                      >
-                        Acesso
-                      </Button>
-                    ) : (
-                      <Button
-                        variant={"destructive"}
-                        className="w-full  "
-                        disabled
-                        onClick={() => router.push("/dashboard/products")}
-                      >
-                        Acesso
-                      </Button>
-                    )}
-                  </DynamicH4>
-                </div>
-              </CardFooter>
-            </DashboardCards>
-          </div>
+                  <CardContent className=" transition-all p-6 bg-white back hover:m-2 hover:rounded-xl">
+                    <DynamicH1>{order.length}</DynamicH1>
+                    <h5 className="mb-2 text-xl font-medium leading-tight text-success-600">
+                      Itens Cadastrados
+                    </h5>
+                  </CardContent>
+                  <CardFooter className="border-t-2 border-success-600 px-6 py-3 bg-gray-100">
+                    <div className="w-full">
+                      <DynamicH4>
+                        {order.length ? (
+                          <Button
+                            className="w-full "
+                            onClick={() => router.push("/dashboard/budget")}
+                          >
+                            Acesso
+                          </Button>
+                        ) : (
+                          <Button
+                            variant={"destructive"}
+                            className="w-full  "
+                            disabled
+                            onClick={() => router.push("/dashboard/products")}
+                          >
+                            Acesso
+                          </Button>
+                        )}
+                      </DynamicH4>
+                    </div>
+                  </CardFooter>
+                </DashboardCards>
+              </div>
+            </HoverCardTrigger>
+            <HoverCardContent side="top" className=" rounded-xl shadow-xl ">
+              Este item apresentado demora de resposta. Por favor aguarde um
+              pouco
+            </HoverCardContent>
+          </HoverCard>
+
           <div>
             {stock?.length ? (
               <Badge className="relative top-2 animate-bounce">OnLine</Badge>
