@@ -37,7 +37,7 @@ export const POST = async (req: NextRequest) => {
 
     console.log(instance);
 
-    return Response.json({ status: "ok" });
+    return Response.json({ status: 200 });
   } catch (err) {
     console.log(err);
   }
